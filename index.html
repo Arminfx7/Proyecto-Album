@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es-GT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Álbum digital de componentes de hardware comparados para el mercado guatemalteco."
+    />
+    <title>Hardware GT — Álbum digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme-motion.css" />
+    <link rel="stylesheet" href="css/software.css" />
+  </head>
+  <body>
+    <div class="reading-progress" id="reading-progress"></div>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Hardware GT, ir al inicio"
+        ><span class="brand-mark">GT</span
+        ><span>HARDWARE<span class="brand-accent">.</span></span></a
+      >
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#album">Álbum</a><a href="#comparaciones">Comparaciones</a
+        ><a href="#recomendaciones">Recomendaciones</a
+        ><a href="#software">Software</a><a href="#guatemala">Guatemala</a
+        ><a href="#creadores">Creadores</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        Menú <span>☰</span>
+      </button>
+      <div class="edition-pill">
+        <span class="status-dot"></span> Edición Guatemala · 2026
+      </div>
+      <button
+        class="theme-switch"
+        id="theme-switch"
+        type="button"
+        aria-pressed="false"
+        aria-label="Cambiar a tema claro"
+      >
+        <span class="switch-track"><span class="switch-knob"></span></span
+        ><span class="switch-label">Tema oscuro</span>
+      </button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+      <a href="#album">Álbum</a><a href="#comparaciones">Comparaciones</a
+      ><a href="#recomendaciones">Recomendaciones</a
+      ><a href="#software">Software</a><a href="#guatemala">Guatemala</a
+      ><a href="#creadores">Creadores</a>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Álbum digital de componentes · GTQ</p>
+          <h1>
+            El mundo del<br /><em>hardware</em><span class="hero-dot">.</span>
+          </h1>
+          <p class="hero-lede">
+            Explora, compara y descubre los componentes que dan forma a cada
+            computadora, con referencias pensadas para comprar mejor en
+            Guatemala.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#album"
+              >Explorar componentes <span>↗</span></a
+            ><a class="button button-quiet" href="#comparaciones"
+              >Ver comparaciones</a
+            >
+          </div>
+          <div class="hero-meta">
+            <span><strong>100</strong> componentes</span
+            ><span><strong>15+</strong> marcas</span
+            ><span><strong>Q</strong> moneda local</span>
+          </div>
+        </div>
+        <div
+          class="hero-visual reveal reveal-delay"
+          aria-label="Composición visual de componentes de computadora"
+        >
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="laptop-stage">
+            <video
+              class="laptop-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Laptop girando en 360 grados"
+            >
+              <source src="media/laptop-360.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+            </video>
+          </div>
+          <div class="floating-tag tag-gpu">GPU <b>RTX 4060</b></div>
+          <div class="floating-tag tag-cpu">CPU <b>RYZEN 5</b></div>
+          <div class="floating-tag tag-ssd">SSD <b>1 TB NVMe</b></div>
+          <div class="hero-cross cross-a">+</div>
+          <div class="hero-cross cross-b">+</div>
+        </div>
+      </section>
+
+      <section class="index-section section-shell" id="album">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">01 / Índice del álbum</p>
+            <h2>Explora por<br /><em>componente</em></h2>
+          </div>
+          <p class="section-note">
+            Una guía visual para entender qué hay dentro —y alrededor— de tu PC.
+          </p>
+        </div>
+        <div class="category-rail" id="category-rail"></div>
+      </section>
+
+      <section class="catalog-section section-shell" id="comparaciones">
+        <div class="catalog-top reveal">
+          <div>
+            <p class="eyebrow">02 / Comparativas curadas</p>
+            <h2>Hardware,<br /><em>sin humo.</em></h2>
+          </div>
+          <div class="catalog-tools">
+            <label class="search-box"
+              ><span>⌕</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Buscar componente, marca o modelo…"
+                aria-label="Buscar componente, marca o modelo"
+            /></label>
+            <div
+              class="filter-row"
+              id="filters"
+              role="group"
+              aria-label="Filtrar componentes"
+            ></div>
+          </div>
+        </div>
+        <div class="catalog-status">
+          <span id="count">Mostrando 12 componentes</span
+          ><span>Precios aproximados · GTQ</span>
+        </div>
+        <div class="component-list" id="component-list"></div>
+      </section>
+
+      <section
+        class="recommendations-section section-shell"
+        id="recomendaciones"
+      >
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">03 / Veredicto editorial</p>
+            <h2>Recomendaciones<br /><em>por categoría.</em></h2>
+          </div>
+          <p class="section-note">
+            Una decisión clara después de revisar rendimiento, precio, uso y
+            disponibilidad.
+          </p>
+        </div>
+        <div class="recommendation-grid" id="recommendation-grid"></div>
+      </section>
+
+      <section class="guatemala-section section-shell" id="guatemala">
+        <div class="guatemala-intro reveal">
+          <p class="eyebrow">03 / Comprar local</p>
+          <h2>Hardware<br />en <em>Guatemala.</em></h2>
+          <p>
+            El mejor componente no siempre es el más caro. Compara garantía,
+            compatibilidad, envío y existencia antes de tomar una decisión.
+          </p>
+        </div>
+        <div class="store-grid">
+          <article class="store-card reveal">
+            <span class="store-number">01</span>
+            <h3>Intelaf</h3>
+            <p>Componentes, periféricos y equipo para armado.</p>
+            <div>
+              <span>Ciudad de Guatemala</span
+              ><a
+                href="https://www.intelaf.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Visitar tienda ↗</a
+              >
+            </div>
+          </article>
+          <article class="store-card reveal reveal-delay">
+            <span class="store-number">02</span>
+            <h3>Pacifiko</h3>
+            <p>Catálogo amplio, opciones de envío nacional y marketplace.</p>
+            <div>
+              <span>Cobertura nacional</span
+              ><a
+                href="https://www.pacifiko.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Visitar tienda ↗</a
+              >
+            </div>
+          </article>
+          <article class="store-card reveal">
+            <span class="store-number">03</span>
+            <h3>Kemik</h3>
+            <p>Tecnología, accesorios y opciones para oficina o estudio.</p>
+            <div>
+              <span>Guatemala</span
+              ><a href="https://www.kemik.gt/" target="_blank" rel="noreferrer"
+                >Visitar tienda ↗</a
+              >
+            </div>
+          </article>
+        </div>
+        <p class="source-note">
+          Nota editorial: los precios y disponibilidad mostrados son referencias
+          aproximadas; pueden cambiar según tienda, fecha, garantía y tipo de
+          cambio. Confirma la ficha antes de comprar.
+        </p>
+      </section>
+
+      <section class="featured-section section-shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">04 / Selección del álbum</p>
+            <h2>Lo que<br /><em>recomendamos.</em></h2>
+          </div>
+          <p class="section-note">
+            Ganadores por equilibrio entre rendimiento, precio, características
+            y disponibilidad.
+          </p>
+        </div>
+        <div class="featured-grid" id="featured-grid"></div>
+      </section>
+      <section class="software-section section-shell" id="software">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">05 / La capa invisible</p>
+            <h2>Software que<br /><em>hace posible.</em></h2>
+          </div>
+          <p class="section-note">
+            El hardware es el cuerpo. El software define lo que puedes crear con
+            él.
+          </p>
+        </div>
+        <div class="software-grid" id="software-grid"></div>
+      </section>
+
+      <section class="lesson-section section-shell">
+        <div class="lesson-card reveal">
+          <div>
+            <p class="eyebrow">06 / Cierre de edición</p>
+            <h2>¿Qué<br /><em>aprendimos?</em></h2>
+          </div>
+          <div class="lesson-copy">
+            <p>
+              Elegir hardware es construir un sistema, no coleccionar
+              especificaciones. Un procesador potente necesita una placa
+              compatible; una GPU necesita una fuente que la sostenga; un SSD
+              rápido necesita una ruta que no lo limite.
+            </p>
+            <p>
+              Tu mejor compra depende del uso, el presupuesto, la garantía y lo
+              que realmente está disponible en Guatemala.
+            </p>
+            <a href="#album" class="text-link"
+              >Volver a explorar <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="creators-section section-shell" id="creadores">
+        <div class="creators-heading reveal">
+          <p class="eyebrow">07 / Proyecto académico</p>
+          <h2>Creadores<br /><em>del álbum.</em></h2>
+          <p>
+            Dos espacios listos para personalizar con la información del equipo.
+          </p>
+        </div>
+        <div class="creator-grid">
+          <article class="creator-card reveal">
+            <div class="creator-avatar">01</div>
+            <div class="creator-info">
+              <span>CREADOR 01</span>
+              <h3>Nombre del estudiante</h3>
+              <p>♧ Carné: XXXXXXXX</p>
+              <p>⌁ Carrera: XXXXXXXX</p>
+              <p>⌂ Universidad: XXXXXXXX</p>
+            </div>
+          </article>
+          <article class="creator-card reveal reveal-delay">
+            <div class="creator-avatar">02</div>
+            <div class="creator-info">
+              <span>CREADOR 02</span>
+              <h3>Nombre del estudiante</h3>
+              <p>♧ Carné: XXXXXXXX</p>
+              <p>⌁ Carrera: XXXXXXXX</p>
+              <p>⌂ Universidad: XXXXXXXX</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio"
+          ><span class="brand-mark">GT</span
+          ><span>HARDWARE<span class="brand-accent">.</span></span></a
+        >
+        <p>Álbum Digital de Componentes de Hardware</p>
+      </div>
+      <div class="footer-meta">
+        <span>Proyecto académico · Guatemala · 2026</span
+        ><span>Precios sujetos a cambio · Fuentes enlazadas en cada ficha</span>
+      </div>
+    </footer>
+    <button class="to-top" id="to-top" aria-label="Volver al inicio">↑</button>
+    <script src="js/catalog-extra.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
