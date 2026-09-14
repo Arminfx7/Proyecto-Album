@@ -17,7 +17,7 @@ const components = [
         price: "Q 899",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1591799264318-7e6ef8ddb7ea"),
+        image: image("photo-1601541984851-6779505c272c"),
         specs: [
           ["Núcleos", "6 / 12 hilos"],
           ["Turbo", "Hasta 4.4 GHz"],
@@ -34,7 +34,7 @@ const components = [
         price: "Q 1,099",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1555617981-dac3880eac6a"),
+        image: image("photo-1540829917886-91ab031b1764"),
         specs: [
           ["Núcleos", "6 / 12 hilos"],
           ["Turbo", "Hasta 4.4 GHz"],
@@ -81,7 +81,7 @@ const components = [
         price: "Q 1,399",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1592664474505-51c549ad15c5"),
+        image: image("photo-1515630278258-407f66498911"),
         specs: [
           ["Chipset", "Intel B660"],
           ["RAM", "4 × DDR4"],
@@ -110,7 +110,7 @@ const components = [
         price: "Q 399",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1562976540-1502c2145186"),
+        image: image("photo-1542978709-19c95dc3bc7e"),
         specs: [
           ["Capacidad", "16 GB (2 × 8)"],
           ["Velocidad", "3200 MT/s"],
@@ -127,7 +127,7 @@ const components = [
         price: "Q 449",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1544197150-b99a580bb7a8"),
+        image: image("photo-1541029071515-84cc54f84dc5"),
         specs: [
           ["Capacidad", "16 GB (2 × 8)"],
           ["Velocidad", "3200 MHz"],
@@ -156,7 +156,7 @@ const components = [
         price: "Q 2,799",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1591488320449-011701bb6704"),
+        image: image("photo-1555618254-84e2cf498b01"),
         specs: [
           ["VRAM", "8 GB GDDR6"],
           ["Interfaz", "PCIe 4.0"],
@@ -173,7 +173,7 @@ const components = [
         price: "Q 2,599",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1587202372634-32705e3bf49c"),
+        image: image("photo-1512756290469-ec264b7fbf87"),
         specs: [
           ["VRAM", "8 GB GDDR6"],
           ["Interfaz", "PCIe 4.0"],
@@ -202,7 +202,7 @@ const components = [
         price: "Q 599",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1597872200969-2b65d56bd16b"),
+        image: image("photo-1588259341607-1dbd302efa21"),
         specs: [
           ["Interfaz", "PCIe 4.0 NVMe"],
           ["Lectura", "Hasta 3,500 MB/s"],
@@ -218,7 +218,7 @@ const components = [
         price: "Q 999",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1625842268584-8f3296236761"),
+        image: image("photo-1757083840018-cd665233a112"),
         specs: [
           ["Interfaz", "PCIe 5.0 / 4.0"],
           ["Lectura", "Hasta 5,000 MB/s"],
@@ -248,7 +248,7 @@ const components = [
         price: "Q 699",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1624705002806-5d72df19c3ad"),
+        image: image("photo-1756576170672-1123237f1d77"),
         specs: [
           ["Potencia", "650 W"],
           ["Certificación", "80+ Bronze"],
@@ -265,7 +265,7 @@ const components = [
         price: "Q 749",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1580846834408-7f4c4f4b3b3c"),
+        image: image("photo-1753557346289-7f7bd0576d05"),
         specs: [
           ["Potencia", "650 W"],
           ["Certificación", "80+ Bronze"],
@@ -295,7 +295,7 @@ const components = [
         price: "Q 999",
         shop: "Walmart Guatemala",
         place: "Guatemala",
-        image: image("photo-1527443224154-c4a3942d3acf"),
+        image: image("photo-1626218174358-7769486c4b79"),
         specs: [
           ["Panel", "IPS"],
           ["Resolución", "1920 × 1080"],
@@ -311,7 +311,7 @@ const components = [
         price: "Q 1,399",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1585792180666-f7347c490ee2"),
+        image: image("photo-1603481588273-2f908a9a7a1b"),
         specs: [
           ["Panel", "VA"],
           ["Resolución", "1920 × 1080"],
@@ -341,7 +341,7 @@ const components = [
         price: "Q 649",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1587829741301-dc798b83add3"),
+        image: image("photo-1595044426077-d36d9236d54a"),
         specs: [
           ["Tipo", "Mecánico"],
           ["Switches", "Táctiles"],
@@ -358,7 +358,7 @@ const components = [
         price: "Q 399",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1595225476474-87563907a212"),
+        image: image("photo-1626958390943-a70309376444"),
         specs: [
           ["Tipo", "Mecánico"],
           ["Switches", "Outemu Blue"],
@@ -387,7 +387,7 @@ const components = [
         price: "Q 249",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1527814050087-3793815479db"),
+        image: image("photo-1605773527852-c546a8584ea3"),
         specs: [
           ["Sensor", "HERO 8K"],
           ["DPI", "Hasta 8,000"],
@@ -404,7 +404,7 @@ const components = [
         price: "Q 299",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1615663245857-ac93bb7c39e7"),
+        image: image("photo-1613141411244-0e4ac259d217"),
         specs: [
           ["Sensor", "Óptico 6,400 DPI"],
           ["DPI", "Hasta 6,400"],
@@ -433,7 +433,7 @@ const components = [
         price: "Q 549",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1505740420928-5e560c06d30e"),
+        image: image("photo-1610041321327-b794c052db27"),
         specs: [
           ["Audio", "DTS Headphone:X"],
           ["Micrófono", "Flexible"],
@@ -450,7 +450,7 @@ const components = [
         price: "Q 699",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1484704849700-f032a568e944"),
+        image: image("photo-1629429407756-4a7703614972"),
         specs: [
           ["Audio", "Dolby Atmos"],
           ["Micrófono", "Dual beamforming"],
@@ -480,7 +480,7 @@ const components = [
         price: "Q 499",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1558494949-ef010cbdcc31"),
+        image: image("photo-1785175862000-5e6051657603"),
         specs: [
           ["Estándar", "Wi-Fi 6 AX3000"],
           ["Velocidad", "2,402 Mbps"],
@@ -497,7 +497,7 @@ const components = [
         price: "Q 159",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1558494949-ef010cbdcc31"),
+        image: image("photo-1785175862090-b667001e8c18"),
         specs: [
           ["Estándar", "Gigabit Ethernet"],
           ["Velocidad", "10/100/1000"],
@@ -526,7 +526,7 @@ const components = [
         price: "Q 799",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1587826080692-f439cd0b70da"),
+        image: image("photo-1762681290673-ba1ad4ea0875"),
         specs: [
           ["Video", "1080p / 30 fps"],
           ["Lente", "78° diagonal"],
@@ -543,7 +543,7 @@ const components = [
         price: "Q 699",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1587826080692-f439cd0b70da"),
+        image: image("photo-1750975314977-374f2290db53"),
         specs: [
           ["Video", "1080p / 60 fps"],
           ["Lente", "95° diagonal"],
@@ -604,14 +604,14 @@ Object.entries(window.hardwareVariants || {}).forEach(([id, variants]) => {
   const category = components.find((item) => item.id === id);
   if (!category) return;
   if (id === "network") category.products[1].brand = "Netgear";
-  variants.forEach(([brand, model, price], index) => {
+  variants.forEach(([brand, model, price, variantImage], index) => {
     category.products.push({
       brand,
       model,
       price,
       shop: index % 2 ? "Pacifiko" : "Intelaf",
       place: index % 2 ? "Cobertura nacional" : "Ciudad de Guatemala",
-      image: category.products[index % 2].image,
+      image: variantImage,
       specs: [...category.products[0].specs, ["Perfil", category.ideal]],
       score: Math.max(8.2, category.products[0].score - index * 0.15),
       source: variantSourceByBrand[brand] || "",
