@@ -1,0 +1,300 @@
+/* fox_7 is an expressive little fox companion, drawn from crisp CSS shapes. */
+.fox-character {
+  display: block;
+  position: relative;
+  width: 116px;
+  height: 154px;
+  transform-origin: center 75%;
+  animation: fox-hover 4.2s ease-in-out infinite;
+}
+
+.fox-head {
+  position: absolute;
+  z-index: 4;
+  top: 31px;
+  left: 19px;
+  width: 78px;
+  height: 66px;
+  border-radius: 42% 42% 48% 48%;
+  background: linear-gradient(145deg, #ffbd62, #f28b3d 58%, #d95b39);
+  box-shadow:
+    inset 0 -4px 0 #a6463c38,
+    0 7px 16px #08133138;
+}
+
+.fox-ear {
+  position: absolute;
+  z-index: 3;
+  top: 5px;
+  width: 35px;
+  height: 54px;
+  background: linear-gradient(145deg, #ffc365, #eb783b);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  filter: drop-shadow(0 3px 2px #111a3040);
+}
+
+.fox-ear i {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 16px;
+  height: 34px;
+  background: linear-gradient(#d84f61, #9c3e63);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.fox-ear-left {
+  left: 16px;
+  transform: rotate(-13deg);
+}
+.fox-ear-right {
+  right: 16px;
+  transform: rotate(13deg);
+}
+
+.fox-eye {
+  position: absolute;
+  top: 27px;
+  width: 8px;
+  height: 12px;
+  border-radius: 50%;
+  background: #17253e;
+  animation: fox-blink 6s infinite;
+}
+
+.fox-eye-left {
+  left: 20px;
+}
+.fox-eye-right {
+  right: 20px;
+}
+
+.fox-muzzle {
+  position: absolute;
+  left: 18px;
+  bottom: 2px;
+  width: 42px;
+  height: 24px;
+}
+
+.fox-muzzle::before,
+.fox-muzzle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 24px;
+  height: 18px;
+  border-radius: 50% 50% 55% 55%;
+  background: #fff1d9;
+}
+
+.fox-muzzle::before {
+  left: 0;
+}
+.fox-muzzle::after {
+  right: 0;
+}
+
+.fox-nose {
+  position: absolute;
+  z-index: 1;
+  left: 18px;
+  top: 3px;
+  width: 8px;
+  height: 6px;
+  border-radius: 50% 50% 65% 65%;
+  background: #542c3c;
+}
+
+.fox-mouth {
+  position: absolute;
+  z-index: 1;
+  left: 21px;
+  top: 9px;
+  width: 3px;
+  height: 6px;
+  border-left: 1px solid #71384a;
+  border-bottom: 1px solid #71384a;
+}
+
+.fox-freckle {
+  position: absolute;
+  top: 43px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #bd5549;
+  box-shadow: 6px 2px #bd5549;
+}
+
+.fox-freckle-left {
+  left: 9px;
+}
+.fox-freckle-right {
+  right: 15px;
+}
+
+.fox-body {
+  position: absolute;
+  z-index: 2;
+  top: 90px;
+  left: 37px;
+  width: 44px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 17px 17px 21px 21px;
+  background: linear-gradient(145deg, #f5a04e, #dc663d);
+  box-shadow: 0 5px 12px #08133130;
+}
+
+.fox-belly {
+  position: absolute;
+  left: 10px;
+  bottom: -5px;
+  width: 25px;
+  height: 29px;
+  border-radius: 50%;
+  background: #fff0d8;
+}
+
+.fox-body b {
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  color: #fff8e9;
+  font: 800 9px var(--sans);
+}
+
+.fox-paw {
+  position: absolute;
+  z-index: 3;
+  top: 95px;
+  width: 13px;
+  height: 28px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f8b258, #e7793f);
+  transform-origin: 50% 5px;
+}
+
+.fox-paw-left {
+  left: 25px;
+  transform: rotate(22deg);
+}
+.fox-paw-right {
+  right: 24px;
+  transform: rotate(-20deg);
+}
+
+.is-greeting .fox-paw-right,
+.companion-button:hover .fox-paw-right,
+.companion-button:focus-visible .fox-paw-right {
+  animation: fox-wave 700ms ease-in-out infinite;
+}
+
+.fox-foot {
+  position: absolute;
+  z-index: 1;
+  top: 122px;
+  width: 22px;
+  height: 12px;
+  border-radius: 9px 9px 10px 10px;
+  background: #f0a14f;
+}
+
+.fox-foot-left {
+  left: 34px;
+}
+.fox-foot-right {
+  right: 32px;
+}
+
+.fox-tail {
+  position: absolute;
+  z-index: 1;
+  top: 99px;
+  right: 1px;
+  width: 41px;
+  height: 26px;
+  border: 9px solid #e9823d;
+  border-left-color: #f6b154;
+  border-radius: 60% 80% 80% 55%;
+  transform: rotate(-33deg);
+  transform-origin: 4px 12px;
+  animation: fox-tail-swish 2.4s ease-in-out infinite;
+}
+
+.fox-tail::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: -2px;
+  width: 11px;
+  height: 14px;
+  border-radius: 0 80% 80% 0;
+  background: #fff0dc;
+}
+
+@keyframes fox-hover {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+@keyframes fox-wave {
+  0%,
+  100% {
+    transform: rotate(-125deg);
+  }
+  50% {
+    transform: rotate(-92deg);
+  }
+}
+
+@keyframes fox-tail-swish {
+  0%,
+  100% {
+    rotate: -5deg;
+  }
+  50% {
+    rotate: 15deg;
+  }
+}
+
+@keyframes fox-blink {
+  0%,
+  42%,
+  46%,
+  100% {
+    transform: scaleY(1);
+  }
+  44% {
+    transform: scaleY(0.12);
+  }
+}
+
+@media (max-width: 700px) {
+  .fox-character {
+    width: 116px;
+    height: 154px;
+    scale: 0.7;
+    transform-origin: top left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fox-character,
+  .fox-tail,
+  .fox-eye,
+  .is-greeting .fox-paw-right,
+  .companion-button:hover .fox-paw-right,
+  .companion-button:focus-visible .fox-paw-right {
+    animation: none;
+  }
+  .is-greeting .fox-paw-right {
+    transform: rotate(-110deg);
+  }
+}

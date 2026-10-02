@@ -1,0 +1,410 @@
+/* An actual layered computer, animated without video downloads or a render loop. */
+.hero-visual {
+  --holo-metal: #1c2948;
+  --holo-rim: #8199c6;
+  --holo-key: #283e62;
+  --holo-light: #8fece2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: min(84svh, 850px);
+  min-height: 530px;
+  overflow: hidden;
+}
+
+.hero-visual::before,
+.hero-visual::after {
+  display: none;
+}
+
+.holo-scene {
+  width: min(100%, 1050px);
+  height: 100%;
+  position: relative;
+  perspective: 1400px;
+}
+
+.holo-float {
+  position: absolute;
+  inset: 0 0 14%;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+  animation: computer-float 8s ease-in-out infinite;
+}
+
+.holo-laptop {
+  position: relative;
+  width: 60%;
+  aspect-ratio: 1.55;
+  transform-style: preserve-3d;
+  transform: rotateX(-8deg) rotateY(-15deg);
+  animation: computer-turn 18s ease-in-out infinite;
+}
+
+.holo-lid {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--holo-rim);
+  border-radius: 18px 18px 7px 7px;
+  padding: 20px 12px 14px;
+  background: linear-gradient(145deg, #4c6081, var(--holo-metal) 26%, #111b31);
+  box-shadow:
+    6px 8px 0 #101a30,
+    0 28px 70px #03071955;
+  backface-visibility: hidden;
+}
+
+.holo-camera {
+  position: absolute;
+  top: 7px;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #91aac9;
+}
+
+.holo-screen {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  color: #9affea;
+  background:
+    radial-gradient(ellipse at 50% 40%, #183d65, transparent 65%),
+    linear-gradient(135deg, #071427, #0e163b);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.holo-screen-top,
+.holo-screen-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 20px;
+  font: 500 clamp(6px, 0.8vw, 10px) var(--mono);
+  letter-spacing: 0.09em;
+  color: #b7cde4;
+  z-index: 1;
+}
+
+.holo-screen-top {
+  border-bottom: 1px solid #8fdad522;
+}
+
+.holo-live {
+  color: #83ebd7;
+}
+
+.holo-circuit {
+  position: absolute;
+  inset: 12% 0;
+  display: grid;
+  place-items: center;
+}
+
+.holo-circuit svg {
+  width: 100%;
+  height: 100%;
+  color: #77e4d7;
+}
+
+.circuit-traces {
+  opacity: 0.25;
+}
+
+.circuit-flow {
+  stroke-dasharray: 20 320;
+  animation: circuit-travel 6s linear infinite;
+}
+
+.holo-processor {
+  position: absolute;
+  width: 23%;
+  aspect-ratio: 1;
+  border: 1px solid #b5fff1;
+  background: linear-gradient(145deg, #264b74, #131f47);
+  box-shadow:
+    0 0 0 7px #68cfdc14,
+    0 0 0 8px #8affe33a,
+    0 12px 35px #0005;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-8deg);
+  animation: processor-pulse 5s ease-in-out infinite;
+}
+
+.holo-processor span {
+  font: 600 clamp(20px, 4vw, 54px) var(--orb-display);
+  letter-spacing: -0.04em;
+}
+
+.holo-processor small {
+  font: 500 clamp(6px, 0.9vw, 11px) var(--mono);
+  letter-spacing: 0.3em;
+}
+
+.holo-node {
+  position: absolute;
+  font: 500 clamp(6px, 0.75vw, 10px) var(--mono);
+  letter-spacing: 0.08em;
+  color: #a9c3dc;
+}
+
+.node-memory {
+  left: 8%;
+  top: 23%;
+}
+
+.node-graphics {
+  right: 5%;
+  bottom: 22%;
+}
+
+.holo-base {
+  position: absolute;
+  top: calc(100% - 2px);
+  width: 100%;
+  height: 57%;
+  transform-origin: center top;
+  transform: rotateX(68deg);
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #7a90b2, var(--holo-metal) 40%, #304565);
+  border: 1px solid var(--holo-rim);
+  border-radius: 3px 3px 18px 18px;
+  padding: 4% 7%;
+  box-shadow: 0 8px 0 #253451;
+}
+
+.holo-keyboard {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 4px;
+  height: 65%;
+}
+
+.holo-keyboard i {
+  background: var(--holo-key);
+  border-radius: 3px;
+  border: 1px solid #91eee28a;
+  box-shadow: 0 2px 0 #061027;
+}
+
+.holo-trackpad {
+  width: 27%;
+  height: 25%;
+  margin: 4% auto 0;
+  border: 1px solid #9cbedb;
+  border-radius: 5px;
+  background: #91c8e112;
+}
+
+.holo-edge {
+  position: absolute;
+  bottom: -2px;
+  left: 12%;
+  width: 76%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #88fff2,
+    #a597ff,
+    transparent
+  );
+}
+
+.holo-halo {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 79%;
+  aspect-ratio: 1;
+  border: 1px solid var(--orb-line);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotateX(58deg) rotateZ(-25deg);
+}
+
+.holo-halo::after {
+  content: "";
+  position: absolute;
+  top: 14%;
+  left: 14%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orb-mint);
+  box-shadow: 0 0 18px var(--orb-mint);
+}
+
+.halo-outer {
+  animation: halo-revolve 28s linear infinite;
+}
+
+.halo-inner {
+  width: 66%;
+  border-color: var(--orb-violet);
+  opacity: 0.4;
+  animation: halo-revolve 35s linear infinite reverse;
+}
+
+.holo-floor {
+  position: absolute;
+  width: 65%;
+  height: 10%;
+  bottom: 8%;
+  left: 17%;
+  background: radial-gradient(ellipse, #5260de35, transparent 70%);
+}
+
+.holo-satellite {
+  position: absolute;
+  width: 30px;
+  aspect-ratio: 1;
+  border: 1px solid var(--orb-violet);
+  background: linear-gradient(135deg, #a198ef50, #718dda12);
+  transform: rotate(35deg);
+  animation: satellite-float 9s ease-in-out infinite;
+}
+
+.satellite-one {
+  top: 20%;
+  right: 12%;
+}
+
+.satellite-two {
+  bottom: 17%;
+  left: 8%;
+  width: 18px;
+  animation-delay: -4s;
+}
+
+body.light-theme .hero-visual {
+  --holo-metal: #9caec9;
+  --holo-rim: #d6e9ff;
+  --holo-key: #263d5e;
+}
+
+body.light-theme .holo-lid {
+  background: linear-gradient(145deg, #f0f7ff, #97accb 40%, #c4d3e8);
+  box-shadow:
+    5px 7px 0 #7f94b5,
+    0 28px 60px #36477628;
+}
+
+body.light-theme .holo-base {
+  background: linear-gradient(145deg, #dce9f9, #9aaeca 55%, #c6d6ec);
+}
+
+.scene-paused .holo-scene *,
+.motion-paused .holo-scene * {
+  animation-play-state: paused;
+}
+
+@keyframes computer-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes computer-turn {
+  0%,
+  100% {
+    transform: rotateX(-8deg) rotateY(-15deg) rotateZ(-2deg);
+  }
+  50% {
+    transform: rotateX(-4deg) rotateY(14deg) rotateZ(2deg);
+  }
+}
+
+@keyframes circuit-travel {
+  to {
+    stroke-dashoffset: -680;
+  }
+}
+
+@keyframes processor-pulse {
+  0%,
+  100% {
+    transform: rotate(-8deg) scale(0.96);
+  }
+  50% {
+    transform: rotate(-8deg) scale(1.03);
+  }
+}
+
+@keyframes halo-revolve {
+  from {
+    transform: translate(-50%, -50%) rotateX(58deg) rotateZ(-25deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(58deg) rotateZ(335deg);
+  }
+}
+
+@keyframes satellite-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(35deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(60deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-visual {
+    height: min(72svh, 620px);
+    min-height: 390px;
+  }
+
+  .holo-laptop {
+    width: 83%;
+  }
+
+  .holo-lid {
+    padding: 13px 6px 8px;
+    border-radius: 10px 10px 4px 4px;
+  }
+
+  .holo-screen-top,
+  .holo-screen-bottom {
+    padding: 10px 8px;
+    letter-spacing: 0;
+    font-size: 5px;
+  }
+
+  .holo-keyboard {
+    gap: 2px;
+  }
+
+  .holo-keyboard i {
+    border-radius: 1px;
+  }
+
+  .holo-halo {
+    width: 98%;
+  }
+
+  .satellite-one {
+    right: 5%;
+    top: 16%;
+    width: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .holo-scene * {
+    animation: none !important;
+  }
+}

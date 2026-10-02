@@ -681,7 +681,8 @@ function render() {
     (c) =>
       (activeFilter === "todos" ||
         c.group === activeFilter ||
-        c.tag.toLowerCase().includes(activeFilter)) &&
+        c.tag.toLowerCase().includes(activeFilter) ||
+        c.name.toLowerCase().includes(activeFilter)) &&
       (!query ||
         c.name.toLowerCase().includes(query) ||
         c.products.some((p) =>
@@ -760,7 +761,9 @@ function observeReveals() {
     { threshold: 0.08 },
   );
   document
-    .querySelectorAll(".reveal:not(.is-visible)")
+    .querySelectorAll(
+      ".reveal:not(.is-visible), .product-card:not(.is-visible)",
+    )
     .forEach((el) => io.observe(el));
 }
 document.querySelector("#search").addEventListener("input", render);
@@ -784,12 +787,6 @@ document
       document.querySelector("#mobile-nav").classList.remove("open"),
     ),
   );
-window.addEventListener("scroll", () => {
-  const max = document.documentElement.scrollHeight - innerHeight;
-  document.querySelector("#reading-progress").style.width =
-    `${(scrollY / max) * 100}%`;
-  document.querySelector("#to-top").classList.toggle("visible", scrollY > 500);
-});
 document
   .querySelector("#to-top")
   .addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
@@ -818,33 +815,43 @@ themeSwitch.addEventListener("click", () => {
 });
 syncTheme();
 
-// Pulso ambiental ligero: transforma la composición del hero sin distraer del contenido.
+// Native scrolling stays in control; visual updates share one animation frame.
 const visual = document.querySelector(".hero-visual");
-visual.addEventListener("pointermove", (e) => {
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const r = visual.getBoundingClientRect();
-  const x = (e.clientX - r.left) / r.width - 0.5;
-  const y = (e.clientY - r.top) / r.height - 0.5;
-  visual.style.setProperty("--pointer-x", `${x * 12}px`);
-  visual.style.setProperty("--pointer-y", `${y * 12}px`);
-});
-visual.addEventListener("pointerleave", () => {
-  visual.style.setProperty("--pointer-x", "0px");
-  visual.style.setProperty("--pointer-y", "0px");
-});
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+const progressBar = document.querySelector("#reading-progress");
+const toTop = document.querySelector("#to-top");
+let heroVisible = true;
+let scrollFrame = 0;
 
-// Escena de portada guiada por el scroll, inspirada en la animación compartida.
-let sceneFrame = null;
+function updateScrollUI() {
+  scrollFrame = 0;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  progressBar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  toTop.classList.toggle("visible", scrollY > 500);
+  window.updateFloatingOrbs?.();
+}
 window.addEventListener(
   "scroll",
   () => {
-    if (sceneFrame || matchMedia("(prefers-reduced-motion: reduce)").matches)
-      return;
-    sceneFrame = requestAnimationFrame(() => {
-      const progress = Math.min(scrollY / Math.max(innerHeight, 1), 1);
-      visual.style.setProperty("--scene-progress", progress);
-      sceneFrame = null;
-    });
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(updateScrollUI);
   },
   { passive: true },
 );
+window.addEventListener("resize", updateScrollUI, { passive: true });
+updateScrollUI();
+
+function syncAmbientMotion() {
+  const paused = document.hidden || reduceMotion.matches;
+  document.body.classList.toggle("motion-paused", paused);
+  visual.classList.toggle("scene-paused", paused || !heroVisible);
+}
+new IntersectionObserver(
+  ([entry]) => {
+    heroVisible = entry.isIntersecting;
+    syncAmbientMotion();
+  },
+  { threshold: 0 },
+).observe(visual);
+document.addEventListener("visibilitychange", syncAmbientMotion);
+reduceMotion.addEventListener("change", syncAmbientMotion);
+syncAmbientMotion();

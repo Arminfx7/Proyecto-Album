@@ -1,0 +1,438 @@
+/* Small glass orbs: scroll transforms on the wrapper, floating on the core. */
+.orbital-field {
+  z-index: -1;
+}
+
+.scroll-orb {
+  --orb-size: 24px;
+  --orb-tint: #76e3ea;
+  position: absolute;
+  left: 5%;
+  top: 18%;
+  width: var(--orb-size);
+  height: var(--orb-size);
+  transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-orb i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 28% 24%,
+    #ffffffed 0,
+    #ffffff70 8%,
+    var(--orb-tint) 25%,
+    #1d285480 65%,
+    #0a103660
+  );
+  border: 1px solid #d7faff70;
+  box-shadow:
+    inset -3px -4px 8px #080e4645,
+    0 5px 18px #409ec228;
+  animation: small-orb-float 8s ease-in-out infinite alternate;
+}
+
+.scroll-orb:nth-child(2) {
+  left: 92%;
+  top: 22%;
+  --orb-size: 38px;
+  --orb-tint: #b49afa;
+}
+
+.scroll-orb:nth-child(3) {
+  left: 3%;
+  top: 64%;
+  --orb-size: 17px;
+  --orb-tint: #a99bea;
+}
+
+.scroll-orb:nth-child(4) {
+  left: 95%;
+  top: 76%;
+  --orb-size: 23px;
+}
+
+.scroll-orb:nth-child(5) {
+  left: 22%;
+  top: 10%;
+  --orb-size: 11px;
+  --orb-tint: #e9a6d7;
+}
+
+.scroll-orb:nth-child(6) {
+  left: 78%;
+  top: 88%;
+  --orb-size: 14px;
+  --orb-tint: #ecb6f4;
+}
+
+.scroll-orb:nth-child(7) {
+  left: 12%;
+  top: 87%;
+  --orb-size: 30px;
+  --orb-tint: #7f9de8;
+}
+
+.scroll-orb:nth-child(8) {
+  left: 85%;
+  top: 47%;
+  --orb-size: 9px;
+}
+
+.scroll-orb:nth-child(2n) i {
+  animation-delay: -4s;
+  animation-duration: 11s;
+}
+
+.scroll-orb:nth-child(3n) i {
+  animation-delay: -6s;
+}
+
+body.light-theme .scroll-orb i {
+  border-color: #667bd052;
+  box-shadow:
+    inset -3px -4px 8px #5667a438,
+    0 6px 16px #647bbd30;
+}
+
+/* Bit lives inside the hero, not over the catalog or navigation. */
+.companion {
+  --bit-shell: #d7e8fa;
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+  width: 126px;
+  z-index: 3;
+  text-align: center;
+}
+
+.companion-button {
+  display: block;
+  width: 116px;
+  height: 154px;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.companion-button:focus-visible {
+  outline: 2px solid var(--orb-mint);
+  outline-offset: 6px;
+}
+
+.bit-robot {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: bit-hover 4s ease-in-out infinite;
+}
+
+.bit-head {
+  position: absolute;
+  left: 17px;
+  top: 28px;
+  width: 82px;
+  height: 63px;
+  border-radius: 27px 27px 23px 23px;
+  background: linear-gradient(135deg, #fff, var(--bit-shell) 45%, #91aad4);
+  box-shadow:
+    inset 0 -4px 0 #7595c14a,
+    0 8px 16px #08133130;
+  z-index: 3;
+  padding: 11px 9px;
+}
+
+.bit-visor {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  height: 38px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #17384b, #0b172f);
+  border-top: 1px solid #5c8498;
+}
+
+.bit-eye {
+  width: 8px;
+  height: 13px;
+  border-radius: 5px;
+  background: #83ffdf;
+  box-shadow: 0 0 8px #6dffd75c;
+  animation: bit-blink 6s infinite;
+}
+
+.bit-smile {
+  position: absolute;
+  left: 27px;
+  bottom: 6px;
+  width: 11px;
+  height: 5px;
+  border-bottom: 2px solid #83ffdf;
+  border-radius: 0 0 12px 12px;
+}
+
+.bit-antenna {
+  position: absolute;
+  top: 12px;
+  left: 55px;
+  width: 5px;
+  height: 20px;
+  background: #a5bce5;
+}
+
+.bit-antenna::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -4px;
+  top: -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #fff, #8feede 40%, #428aaf);
+}
+
+.bit-ear {
+  position: absolute;
+  top: 48px;
+  width: 12px;
+  height: 25px;
+  background: #7f91ce;
+  border: 2px solid #d7e8fa;
+  border-radius: 8px;
+}
+
+.ear-left {
+  left: 9px;
+}
+.ear-right {
+  right: 9px;
+}
+
+.bit-body {
+  position: absolute;
+  top: 91px;
+  left: 32px;
+  width: 52px;
+  height: 38px;
+  border-radius: 12px 12px 22px 22px;
+  background: linear-gradient(135deg, #e9f5ff, #a6b9df);
+  color: #243454;
+  font: 700 10px var(--sans);
+  padding-top: 7px;
+  z-index: 2;
+}
+
+.bit-body i {
+  display: block;
+  width: 14px;
+  height: 3px;
+  background: #257b83;
+  border-radius: 9px;
+  margin: 3px auto;
+}
+
+.bit-arm {
+  position: absolute;
+  top: 92px;
+  width: 12px;
+  height: 30px;
+  background: linear-gradient(90deg, #f4faff, #9eb2d5);
+  border-radius: 10px;
+  transform-origin: 50% 6px;
+}
+
+.arm-left {
+  left: 16px;
+  transform: rotate(18deg);
+}
+.arm-right {
+  right: 16px;
+  transform: rotate(-18deg);
+}
+
+.is-greeting .arm-right,
+.companion-button:hover .arm-right,
+.companion-button:focus-visible .arm-right {
+  animation: bit-wave 750ms ease-in-out infinite;
+}
+
+.bit-thruster {
+  position: absolute;
+  left: 47px;
+  top: 125px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(#74dfed80, transparent);
+  border-radius: 0 0 50% 50%;
+}
+
+.companion-name {
+  display: block;
+  color: var(--orb-muted);
+  font: 700 8px var(--sans);
+  letter-spacing: 0.07em;
+}
+
+.companion-message {
+  position: absolute;
+  bottom: calc(100% + 2px);
+  right: 0;
+  width: 206px;
+  padding: 14px 16px;
+  text-align: left;
+  border-radius: 16px 16px 4px 16px;
+  background: #172541;
+  border: 1px solid #8ea7d43d;
+  box-shadow: 0 12px 30px #0002;
+  opacity: 0;
+  transform: translateY(7px);
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+  pointer-events: none;
+}
+
+.companion-message strong {
+  display: block;
+  font-size: 13px;
+  color: #a8f4e0;
+  margin-bottom: 4px;
+}
+
+.companion-message span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #d1def4;
+}
+
+.is-greeting .companion-message,
+.companion:focus-within .companion-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.light-theme .companion-message {
+  background: #fff;
+  border-color: #cdd8ec;
+}
+
+body.light-theme .companion-message strong {
+  color: #176d61;
+}
+body.light-theme .companion-message span {
+  color: #3c4e6b;
+}
+
+@keyframes small-orb-float {
+  from {
+    transform: translateY(-7px);
+  }
+  to {
+    transform: translateY(9px);
+  }
+}
+
+@keyframes bit-hover {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(2deg);
+  }
+}
+
+@keyframes bit-blink {
+  0%,
+  42%,
+  46%,
+  100% {
+    transform: scaleY(1);
+  }
+  44% {
+    transform: scaleY(0.12);
+  }
+}
+
+@keyframes bit-wave {
+  0%,
+  100% {
+    transform: rotate(-135deg);
+  }
+  50% {
+    transform: rotate(-105deg);
+  }
+}
+
+.motion-paused .scroll-orb i {
+  animation-play-state: paused;
+}
+
+@media (max-width: 700px) {
+  .scroll-orb {
+    --orb-size: 14px;
+  }
+  .scroll-orb:nth-child(2) {
+    --orb-size: 22px;
+    left: 91%;
+  }
+  .scroll-orb:nth-child(n + 5) {
+    display: none;
+  }
+  .companion {
+    right: 0;
+    bottom: 0;
+    width: 90px;
+  }
+  .companion-button {
+    width: 82px;
+    height: 110px;
+  }
+  .bit-robot {
+    width: 116px;
+    height: 154px;
+    scale: 0.7;
+    transform-origin: top left;
+  }
+  .companion-name {
+    font-size: 6px;
+  }
+  .companion-message {
+    right: calc(100% + 4px);
+    bottom: 22px;
+    width: min(190px, 52vw);
+    padding: 10px 12px;
+  }
+  .holo-float {
+    bottom: 24%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-orb {
+    transition: none;
+  }
+  .scroll-orb i,
+  .bit-robot,
+  .bit-eye,
+  .is-greeting .arm-right,
+  .companion-button:hover .arm-right,
+  .companion-button:focus-visible .arm-right {
+    animation: none;
+  }
+  .is-greeting .arm-right {
+    transform: rotate(-120deg);
+  }
+  .companion-message {
+    transition: none;
+  }
+}

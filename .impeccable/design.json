@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T00:00:00-06:00",
+  "title": "Design System: Hardware GT · Orbital Atlas",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#070719",
+        "tonalRamp": [
+          "#070719",
+          "#10102a",
+          "#1d1d42",
+          "#303061",
+          "#53558c",
+          "#8587b5",
+          "#bec0da",
+          "#f0f1fb"
+        ]
+      },
+      "violet": {
+        "role": "primary",
+        "displayName": "Orbital Violet",
+        "canonical": "#9c74ff",
+        "tonalRamp": [
+          "#1e0c4c",
+          "#351077",
+          "#531aa8",
+          "#7337cf",
+          "#9c74ff",
+          "#b6a0ff",
+          "#d2c4ff",
+          "#eee9ff"
+        ]
+      },
+      "blue": {
+        "role": "secondary",
+        "displayName": "Spectrum Blue",
+        "canonical": "#4ba7ff",
+        "tonalRamp": [
+          "#06234d",
+          "#093a78",
+          "#1059aa",
+          "#237bd4",
+          "#4ba7ff",
+          "#7abfff",
+          "#b0dcff",
+          "#e6f4ff"
+        ]
+      },
+      "mint": {
+        "role": "primary",
+        "displayName": "Signal Mint",
+        "canonical": "#63f4d4",
+        "tonalRamp": [
+          "#063e38",
+          "#075e54",
+          "#087e70",
+          "#1bb49e",
+          "#63f4d4",
+          "#91f8e2",
+          "#c2fbed",
+          "#ecfffa"
+        ]
+      },
+      "pink": {
+        "role": "tertiary",
+        "displayName": "Pulse Pink",
+        "canonical": "#fa70ce",
+        "tonalRamp": [
+          "#4c0639",
+          "#760953",
+          "#aa1379",
+          "#d837a2",
+          "#fa70ce",
+          "#ff9fdd",
+          "#ffc7eb",
+          "#ffecf8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Orbital Display",
+        "purpose": "Use for the hero and major section destinations only."
+      },
+      "body": {
+        "displayName": "Practical Reading",
+        "purpose": "Use for product explanations, comparisons, and recommendations."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-ambient",
+        "value": "0 16px 42px rgba(0, 0, 0, 0.2)",
+        "purpose": "Default separation for catalog cards."
+      },
+      {
+        "name": "panel-hover",
+        "value": "0 22px 50px rgba(5, 7, 27, 0.38)",
+        "purpose": "Softly deepen a card when it is hovered."
+      },
+      {
+        "name": "primary-glow",
+        "value": "0 12px 28px rgba(70, 221, 195, 0.2)",
+        "purpose": "Make the primary action read as a mint light source."
+      }
+    ],
+    "motion": [
+      {
+        "name": "navigation-underline",
+        "value": "transform 220ms ease",
+        "purpose": "Reveal the desktop navigation underline."
+      },
+      {
+        "name": "orbital-turn",
+        "value": "rotate 360deg linear infinite",
+        "purpose": "Slowly turn decorative orbital paths."
+      },
+      {
+        "name": "orb-breathe",
+        "value": "scale and opacity keyframes",
+        "purpose": "Give ambient luminous spheres a quiet pulse."
+      }
+    ],
+    "breakpoints": [
+      { "name": "catalog-compact", "value": "980px" },
+      { "name": "mobile-navigation", "value": "850px" },
+      { "name": "phone", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The direct exploration or next-step action.",
+      "html": "<button class=\"ds-btn-primary\">Explorar catálogo <span>→</span></button>",
+      "css": ".ds-btn-primary { min-height: 49px; border: 0; border-radius: 999px; padding: .86rem 1.25rem; background: linear-gradient(120deg, #63f4d4, #a0f7e9); color: #101331; font: 800 .9rem Manrope, sans-serif; cursor: pointer; box-shadow: 0 12px 28px rgba(70, 221, 195, .2); transition: transform 180ms ease, box-shadow 180ms ease; } .ds-btn-primary span { color: #25166f; } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 34px rgba(70, 221, 195, .33); } .ds-btn-primary:focus-visible { outline: 3px solid #63f4d4; outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "A secondary action that remains readable without competing with mint.",
+      "html": "<button class=\"ds-btn-quiet\">Ver recomendaciones</button>",
+      "css": ".ds-btn-quiet { min-height: 49px; border: 1px solid rgba(224, 234, 255, .26); border-radius: 999px; padding: .86rem 1.25rem; background: rgba(21, 27, 67, .62); color: #ecf2ff; font: 800 .9rem Manrope, sans-serif; cursor: pointer; transition: border-color 180ms ease, transform 180ms ease; } .ds-btn-quiet:hover { border-color: #63f4d4; transform: translateY(-2px); } .ds-btn-quiet:focus-visible { outline: 3px solid #63f4d4; outline-offset: 3px; }"
+    },
+    {
+      "name": "Catalog Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "A component entry with a technical image field and a carefully legible content area.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-image\"><span>COMPONENTE 01</span></div><div class=\"ds-card-content\"><small>RENDIMIENTO</small><h3>Memoria RAM</h3><p>Una lectura clara de capacidad, velocidad y compatibilidad.</p></div></article>",
+      "css": ".ds-card { overflow: hidden; border: 1px solid rgba(186, 204, 255, .18); border-radius: 16px; background: linear-gradient(145deg, rgba(26, 35, 84, .82), rgba(13, 17, 51, .84)); color: #e9f1ff; box-shadow: 0 16px 42px rgba(0, 0, 0, .2); font-family: Manrope, sans-serif; transition: border-color 180ms ease, box-shadow 180ms ease; } .ds-card-image { display: grid; min-height: 128px; place-items: center; background: radial-gradient(circle at 30% 22%, rgba(116, 96, 255, .58), transparent 36%), radial-gradient(circle at 75% 82%, rgba(80, 188, 255, .42), transparent 40%), #0b1031; color: #63f4d4; font: 600 .68rem Unbounded, sans-serif; } .ds-card-content { padding: 1.25rem; } .ds-card small { color: #63f4d4; font-weight: 800; } .ds-card h3 { margin: .45rem 0; font-size: 1.2rem; } .ds-card p { margin: 0; color: #b2bedf; line-height: 1.55; } .ds-card:hover { border-color: rgba(129, 239, 218, .58); box-shadow: 0 22px 50px rgba(5, 7, 27, .38); }"
+    },
+    {
+      "name": "Orbital Chip",
+      "kind": "chip",
+      "refersTo": "component-flag",
+      "description": "A compact classification label used to keep technical scanning organized.",
+      "html": "<span class=\"ds-chip\">GAMING · DDR5</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; min-height: 29px; border: 1px solid rgba(185, 206, 255, .2); border-radius: 999px; padding: 0 .72rem; background: rgba(63, 60, 143, .22); color: #63f4d4; font: 800 .68rem Manrope, sans-serif; letter-spacing: .04em; }"
+    },
+    {
+      "name": "Orbital Navigation",
+      "kind": "nav",
+      "refersTo": "desktop-nav",
+      "description": "A compact navigation line with mint as a directional underline rather than a persistent fill.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#catalogo\">Catálogo</a><a href=\"#comparar\">Comparar</a><a href=\"#recomendaciones\">Recomendaciones</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 1.25rem; padding: 1rem; background: rgba(7, 7, 25, .66); font: 600 .72rem Manrope, sans-serif; } .ds-nav a { position: relative; color: #b2bedf; text-decoration: none; } .ds-nav a::after { content: ''; position: absolute; right: 0; bottom: -.45rem; left: 0; height: 1px; background: #63f4d4; transform: scaleX(0); transform-origin: left; transition: transform 220ms ease; } .ds-nav a:hover { color: #fff; } .ds-nav a:hover::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid #63f4d4; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Orbital Atlas",
+    "overview": "Hardware GT treats the catalog as an instrument field rather than a conventional product grid. The visitor enters through a laptop contained by luminous orbital paths, then descends into an ordered, legible collection of components, comparisons, and recommendations. The atmosphere is deep cosmic blue with ultraviolet, ice, and mint signals. Animated orbs and slow rings make the page feel alive, while restrained translucent surfaces preserve enough contrast for researching real purchase decisions.",
+    "keyCharacteristics": [
+      "Immersive dark-space canvas with luminous orbital motion.",
+      "High-clarity catalog surfaces and readable, semantic color roles.",
+      "Large geometric display type balanced by calm, practical body copy.",
+      "Motion remains ambient and optional; the content remains usable without it."
+    ],
+    "rules": [
+      {
+        "name": "The Signal-Not-Noise Rule",
+        "body": "Mint, violet, blue, and pink should remain navigational light sources. Do not flood a full section with an accent color; let the dark field carry the composition.",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Voice Rule",
+        "body": "Use the display face to announce a destination, then return immediately to Manrope for reading, comparison, and details.",
+        "section": "typography"
+      },
+      {
+        "name": "The Atmospheric Depth Rule",
+        "body": "Use glow and tonal contrast to establish depth first; reserve stronger shadows for hover and card separation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use mint for the clearest action, current state, and focus indication.",
+      "Do keep technical comparisons and recommendations on calm translucent surfaces.",
+      "Do let a little motion establish a living instrument field, while preserving a complete reduced-motion mode.",
+      "Do preserve the laptop's transparent treatment so the hero reads as one composition."
+    ],
+    "donts": [
+      "Don't place long text in Unbounded or use it for dense product specifications.",
+      "Don't use the pale light-theme background without the dark, high-contrast text tokens.",
+      "Don't add large black media boxes behind the hero laptop.",
+      "Don't turn every card, heading, or section into a neon accent; contrast needs quiet areas to work."
+    ]
+  }
+}
