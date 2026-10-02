@@ -1,5 +1,3 @@
-const image = (id) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=82`;
 
 // Precios editoriales de referencia: confirmar en la tienda antes de publicar.
 const components = [
@@ -17,7 +15,7 @@ const components = [
         price: "Q 899",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1601541984851-6779505c272c"),
+        image: "media/products/procesadores-amd-ryzen-5-5600.webp",
         specs: [
           ["Núcleos", "6 / 12 hilos"],
           ["Turbo", "Hasta 4.4 GHz"],
@@ -34,7 +32,7 @@ const components = [
         price: "Q 1,099",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1540829917886-91ab031b1764"),
+        image: "media/products/procesadores-intel-core-i5-12400f.webp",
         specs: [
           ["Núcleos", "6 / 12 hilos"],
           ["Turbo", "Hasta 4.4 GHz"],
@@ -64,7 +62,7 @@ const components = [
         price: "Q 1,349",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1518770660439-4636190af475"),
+        image: "media/products/motherboards-asus-tuf-gaming-b550-plus.webp",
         specs: [
           ["Chipset", "AMD B550"],
           ["RAM", "4 × DDR4"],
@@ -81,7 +79,7 @@ const components = [
         price: "Q 1,399",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1515630278258-407f66498911"),
+        image: "media/products/motherboards-msi-pro-b660m-a-wifi-ddr4.webp",
         specs: [
           ["Chipset", "Intel B660"],
           ["RAM", "4 × DDR4"],
@@ -110,7 +108,7 @@ const components = [
         price: "Q 399",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1542978709-19c95dc3bc7e"),
+        image: "media/products/ram-kingston-fury-beast-16-gb-ddr4.webp",
         specs: [
           ["Capacidad", "16 GB (2 × 8)"],
           ["Velocidad", "3200 MT/s"],
@@ -127,7 +125,7 @@ const components = [
         price: "Q 449",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1541029071515-84cc54f84dc5"),
+        image: "media/products/ram-corsair-vengeance-lpx-16-gb.webp",
         specs: [
           ["Capacidad", "16 GB (2 × 8)"],
           ["Velocidad", "3200 MHz"],
@@ -156,7 +154,7 @@ const components = [
         price: "Q 2,799",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1555618254-84e2cf498b01"),
+        image: "media/products/gpu-nvidia-geforce-rtx-4060-8-gb.webp",
         specs: [
           ["VRAM", "8 GB GDDR6"],
           ["Interfaz", "PCIe 4.0"],
@@ -173,7 +171,7 @@ const components = [
         price: "Q 2,599",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1512756290469-ec264b7fbf87"),
+        image: "media/products/gpu-amd-radeon-rx-7600-8-gb.webp",
         specs: [
           ["VRAM", "8 GB GDDR6"],
           ["Interfaz", "PCIe 4.0"],
@@ -202,7 +200,7 @@ const components = [
         price: "Q 599",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1588259341607-1dbd302efa21"),
+        image: "media/products/storage-kingston-nv2-1-tb-nvme.webp",
         specs: [
           ["Interfaz", "PCIe 4.0 NVMe"],
           ["Lectura", "Hasta 3,500 MB/s"],
@@ -218,7 +216,7 @@ const components = [
         price: "Q 999",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1757083840018-cd665233a112"),
+        image: "media/products/storage-samsung-990-evo-1-tb.webp",
         specs: [
           ["Interfaz", "PCIe 5.0 / 4.0"],
           ["Lectura", "Hasta 5,000 MB/s"],
@@ -248,7 +246,7 @@ const components = [
         price: "Q 699",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1756576170672-1123237f1d77"),
+        image: "media/products/psu-corsair-cx650-650w-80-bronze.webp",
         specs: [
           ["Potencia", "650 W"],
           ["Certificación", "80+ Bronze"],
@@ -265,7 +263,7 @@ const components = [
         price: "Q 749",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1753557346289-7f7bd0576d05"),
+        image: "media/products/psu-cooler-master-mwe-bronze-v2-650w.webp",
         specs: [
           ["Potencia", "650 W"],
           ["Certificación", "80+ Bronze"],
@@ -295,7 +293,7 @@ const components = [
         price: "Q 999",
         shop: "Walmart Guatemala",
         place: "Guatemala",
-        image: image("photo-1626218174358-7769486c4b79"),
+        image: "media/products/monitor-lg-24mp400-b-24-ips.webp",
         specs: [
           ["Panel", "IPS"],
           ["Resolución", "1920 × 1080"],
@@ -311,7 +309,7 @@ const components = [
         price: "Q 1,399",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1603481588273-2f908a9a7a1b"),
+        image: "media/products/monitor-samsung-odyssey-g3-24-144-hz.webp",
         specs: [
           ["Panel", "VA"],
           ["Resolución", "1920 × 1080"],
@@ -341,7 +339,7 @@ const components = [
         price: "Q 649",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1595044426077-d36d9236d54a"),
+        image: "media/products/keyboard-logitech-g413-se-mecanico.webp",
         specs: [
           ["Tipo", "Mecánico"],
           ["Switches", "Táctiles"],
@@ -358,7 +356,7 @@ const components = [
         price: "Q 399",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1626958390943-a70309376444"),
+        image: "media/products/keyboard-redragon-k552-kumara-rgb.webp",
         specs: [
           ["Tipo", "Mecánico"],
           ["Switches", "Outemu Blue"],
@@ -387,7 +385,7 @@ const components = [
         price: "Q 249",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1605773527852-c546a8584ea3"),
+        image: "media/products/mouse-logitech-g203-lightsync.webp",
         specs: [
           ["Sensor", "HERO 8K"],
           ["DPI", "Hasta 8,000"],
@@ -404,7 +402,7 @@ const components = [
         price: "Q 299",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1613141411244-0e4ac259d217"),
+        image: "media/products/mouse-razer-deathadder-essential.webp",
         specs: [
           ["Sensor", "Óptico 6,400 DPI"],
           ["DPI", "Hasta 6,400"],
@@ -433,7 +431,7 @@ const components = [
         price: "Q 549",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1610041321327-b794c052db27"),
+        image: "media/products/audio-hyperx-cloud-stinger-2.webp",
         specs: [
           ["Audio", "DTS Headphone:X"],
           ["Micrófono", "Flexible"],
@@ -450,7 +448,7 @@ const components = [
         price: "Q 699",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1629429407756-4a7703614972"),
+        image: "media/products/audio-logitech-g435-lightspeed.webp",
         specs: [
           ["Audio", "Dolby Atmos"],
           ["Micrófono", "Dual beamforming"],
@@ -480,7 +478,7 @@ const components = [
         price: "Q 499",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1785175862000-5e6051657603"),
+        image: "media/products/network-tp-link-archer-tx55e-wi-fi-6.webp",
         specs: [
           ["Estándar", "Wi-Fi 6 AX3000"],
           ["Velocidad", "2,402 Mbps"],
@@ -497,7 +495,7 @@ const components = [
         price: "Q 159",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: image("photo-1785175862090-b667001e8c18"),
+        image: "media/products/network-tp-link-tg-3468-gigabit-ethernet.webp",
         specs: [
           ["Estándar", "Gigabit Ethernet"],
           ["Velocidad", "10/100/1000"],
@@ -526,7 +524,7 @@ const components = [
         price: "Q 799",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: image("photo-1762681290673-ba1ad4ea0875"),
+        image: "media/products/webcam-logitech-c920s-pro-hd.webp",
         specs: [
           ["Video", "1080p / 30 fps"],
           ["Lente", "78° diagonal"],
@@ -543,7 +541,7 @@ const components = [
         price: "Q 699",
         shop: "Kemik",
         place: "Guatemala",
-        image: image("photo-1750975314977-374f2290db53"),
+        image: "media/products/webcam-avermedia-pw315-full-hd.webp",
         specs: [
           ["Video", "1080p / 60 fps"],
           ["Lente", "95° diagonal"],
@@ -603,7 +601,6 @@ const variantSourceByBrand = {
 Object.entries(window.hardwareVariants || {}).forEach(([id, variants]) => {
   const category = components.find((item) => item.id === id);
   if (!category) return;
-  if (id === "network") category.products[1].brand = "Netgear";
   variants.forEach(([brand, model, price, variantImage], index) => {
     category.products.push({
       brand,

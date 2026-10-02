@@ -1,5 +1,3 @@
-const extraImage = (id) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=82`;
 window.hardwareExtras = [
   {
     id: "cooling",
@@ -15,7 +13,7 @@ window.hardwareExtras = [
         price: "Q 449",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1754928864101-de34da92767d"),
+        image: "media/products/cooling-deepcool-ak400-digital.webp",
         specs: [
           ["Tipo", "Aire · torre"],
           ["Compatibilidad", "AM4 · AM5 · LGA1700"],
@@ -32,7 +30,7 @@ window.hardwareExtras = [
         price: "Q 899",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1755625655242-c1e0721c1ab6"),
+        image: "media/products/cooling-cooler-master-masterliquid-ml240l-v2.webp",
         specs: [
           ["Tipo", "Líquida · 240 mm"],
           ["Compatibilidad", "AM4 · AM5 · LGA1700"],
@@ -62,7 +60,7 @@ window.hardwareExtras = [
         price: "Q 899",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1755182528946-1dad8a79f44d"),
+        image: "media/products/case-nzxt-h5-flow.webp",
         specs: [
           ["Formato", "ATX · mATX · ITX"],
           ["Panel", "Vidrio templado"],
@@ -78,7 +76,7 @@ window.hardwareExtras = [
         price: "Q 999",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1719927604476-dc404b85358f"),
+        image: "media/products/case-corsair-4000d-airflow.webp",
         specs: [
           ["Formato", "ATX · mATX · ITX"],
           ["Panel", "Vidrio templado"],
@@ -108,7 +106,7 @@ window.hardwareExtras = [
         price: "Q 119",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1712701647867-41785a4ff621"),
+        image: "media/products/fans-arctic-p12-pwm-pst-120-mm.webp",
         specs: [
           ["Tamaño", "120 mm"],
           ["RPM", "180–1,800"],
@@ -124,7 +122,7 @@ window.hardwareExtras = [
         price: "Q 249",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1560682095-9250590aef9f"),
+        image: "media/products/fans-corsair-af120-rgb-elite.webp",
         specs: [
           ["Tamaño", "120 mm"],
           ["RPM", "550–2,100"],
@@ -154,7 +152,7 @@ window.hardwareExtras = [
         price: "Q 399",
         shop: "Walmart Guatemala",
         place: "Guatemala",
-        image: extraImage("photo-1564593822213-66b81f28e631"),
+        image: "media/products/speakers-logitech-z207-bluetooth.webp",
         specs: [
           ["Potencia", "10 W RMS"],
           ["Conexión", "Bluetooth + 3.5 mm"],
@@ -171,7 +169,7 @@ window.hardwareExtras = [
         price: "Q 349",
         shop: "Kemik",
         place: "Guatemala",
-        image: extraImage("photo-1585246135063-c361ccd416b6"),
+        image: "media/products/speakers-creative-pebble-v3-usb-c.webp",
         specs: [
           ["Potencia", "8 W RMS"],
           ["Conexión", "USB-C + BT"],
@@ -200,7 +198,7 @@ window.hardwareExtras = [
         price: "Q 399",
         shop: "Kemik",
         place: "Guatemala",
-        image: extraImage("photo-1660631228116-b3643559f611"),
+        image: "media/products/microphone-fifine-k669b-usb.webp",
         specs: [
           ["Tipo", "Condensador"],
           ["Patrón", "Cardioide"],
@@ -217,7 +215,7 @@ window.hardwareExtras = [
         price: "Q 549",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1601856254555-a9c0ebef8af3"),
+        image: "media/products/microphone-hyperx-solocast-usb.webp",
         specs: [
           ["Tipo", "Condensador"],
           ["Patrón", "Cardioide"],
@@ -246,7 +244,7 @@ window.hardwareExtras = [
         price: "Q 1,799",
         shop: "Office Depot Guatemala",
         place: "Guatemala",
-        image: extraImage("photo-1612815154858-60aa4c59eaa6"),
+        image: "media/products/printer-epson-ecotank-l3250.webp",
         specs: [
           ["Tecnología", "Inyección · tanque"],
           ["Funciones", "Imprime · escanea · copia"],
@@ -263,7 +261,7 @@ window.hardwareExtras = [
         price: "Q 1,699",
         shop: "Walmart Guatemala",
         place: "Guatemala",
-        image: extraImage("photo-1650094980833-7373de26feb6"),
+        image: "media/products/printer-hp-smart-tank-580.webp",
         specs: [
           ["Tecnología", "Inyección · tanque"],
           ["Funciones", "Imprime · escanea · copia"],
@@ -293,7 +291,7 @@ window.hardwareExtras = [
         price: "Q 1,199",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1601737487795-dab272f52420"),
+        image: "media/products/external-ssd-samsung-t7-shield-1-tb.webp",
         specs: [
           ["Interfaz", "USB 3.2 Gen 2"],
           ["Lectura", "Hasta 1,050 MB/s"],
@@ -310,7 +308,7 @@ window.hardwareExtras = [
         price: "Q 899",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1581725645226-92ad3b4c16d8"),
+        image: "media/products/external-ssd-kingston-xs1000-1-tb.webp",
         specs: [
           ["Interfaz", "USB 3.2 Gen 2"],
           ["Lectura", "Hasta 1,050 MB/s"],
@@ -339,7 +337,7 @@ window.hardwareExtras = [
         price: "Q 799",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: "https://cdn.pixabay.com/photo/2013/07/13/11/31/ups-158315_640.png",
+        image: "media/products/ups-forza-nt-1011-1000-va.webp",
         specs: [
           ["Capacidad", "1000 VA / 500 W"],
           ["Topología", "Interactiva"],
@@ -355,7 +353,7 @@ window.hardwareExtras = [
         price: "Q 749",
         shop: "Office Depot Guatemala",
         place: "Guatemala",
-        image: "https://cdn.pixabay.com/photo/2015/11/07/20/38/generator-1032627_640.png",
+        image: "media/products/ups-apc-back-ups-650-va.webp",
         specs: [
           ["Capacidad", "650 VA / 390 W"],
           ["Topología", "Interactiva"],
@@ -384,7 +382,7 @@ window.hardwareExtras = [
         price: "Q 499",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1549822531-d99bcfebc360"),
+        image: "media/products/sound-card-asus-xonar-se-5-1.webp",
         specs: [
           ["Audio", "5.1 canales"],
           ["Interfaz", "PCIe"],
@@ -401,7 +399,7 @@ window.hardwareExtras = [
         price: "Q 599",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1766182065635-75b013345dc3"),
+        image: "media/products/sound-card-creative-sound-blaster-audigy-fx.webp",
         specs: [
           ["Audio", "5.1 canales"],
           ["Interfaz", "PCIe"],
@@ -431,7 +429,7 @@ window.hardwareExtras = [
         price: "Q 199",
         shop: "Kemik",
         place: "Guatemala",
-        image: "https://cdn.pixabay.com/photo/2014/04/03/10/44/card-reader-311291_640.png",
+        image: "media/products/card-reader-ugreen-usb-c-sd-microsd.webp",
         specs: [
           ["Interfaz", "USB-C 3.0"],
           ["Formatos", "SD · microSD"],
@@ -447,7 +445,7 @@ window.hardwareExtras = [
         price: "Q 249",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1500456163299-dd69b5a26efa"),
+        image: "media/products/card-reader-kingston-mobilelite-plus-usb-3-2.webp",
         specs: [
           ["Interfaz", "USB 3.2"],
           ["Formatos", "SD · microSD"],
@@ -476,7 +474,7 @@ window.hardwareExtras = [
         price: "Q 249",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1612287230202-1ff1d85d1bdf"),
+        image: "media/products/gamepad-logitech-f310.webp",
         specs: [
           ["Conexión", "USB con cable"],
           ["Distribución", "XInput / DirectInput"],
@@ -493,7 +491,7 @@ window.hardwareExtras = [
         price: "Q 499",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1509198397868-475647b2a1e5"),
+        image: "media/products/gamepad-8bitdo-ultimate-c-2-4g.webp",
         specs: [
           ["Conexión", "2.4 GHz inalámbrica"],
           ["Batería", "Hasta 25 horas"],
@@ -522,7 +520,7 @@ window.hardwareExtras = [
         price: "Q 4,999",
         shop: "Office Depot Guatemala",
         place: "Guatemala",
-        image: extraImage("photo-1535016120720-40c646be5580"),
+        image: "media/products/projector-epson-co-fh02-full-hd.webp",
         specs: [
           ["Resolución", "1920 × 1080"],
           ["Brillo", "3,000 lúmenes"],
@@ -539,7 +537,7 @@ window.hardwareExtras = [
         price: "Q 4,499",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1528395874238-34ebe249b3f2"),
+        image: "media/products/projector-benq-gv31-full-hd.webp",
         specs: [
           ["Resolución", "1920 × 1080"],
           ["Brillo", "300 ANSI lúmenes"],
@@ -568,7 +566,7 @@ window.hardwareExtras = [
         price: "Q 199",
         shop: "Intelaf",
         place: "Ciudad de Guatemala",
-        image: extraImage("photo-1702561667800-2c49b0182229"),
+        image: "media/products/mousepad-logitech-g240-cloth-gaming.webp",
         specs: [
           ["Superficie", "Tela de baja fricción"],
           ["Tamaño", "340 × 280 mm"],
@@ -585,7 +583,7 @@ window.hardwareExtras = [
         price: "Q 249",
         shop: "Pacifiko",
         place: "Cobertura nacional",
-        image: extraImage("photo-1587749091716-f7b291a87f87"),
+        image: "media/products/mousepad-razer-gigantus-v2-medium.webp",
         specs: [
           ["Superficie", "Tela microtejida"],
           ["Tamaño", "360 × 275 mm"],
@@ -607,7 +605,7 @@ window.softwareCatalog = [
     name: "Windows 11",
     desc: "La plataforma más compatible para gaming, oficina y periféricos.",
     badge: "Compatibilidad",
-    image: extraImage("photo-1665395937592-d485b12c1898"),
+    image: "media/products/software-windows-11.webp",
     recommend: "Windows 11 Home",
     source: "https://www.microsoft.com/windows/windows-11",
   },
@@ -616,7 +614,7 @@ window.softwareCatalog = [
     name: "Ubuntu Linux",
     desc: "Alternativa abierta para aprender, programar y recuperar equipos.",
     badge: "Código abierto",
-    image: extraImage("photo-1629654297299-c8506221ca97"),
+    image: "media/products/software-ubuntu-linux.webp",
     recommend: "Ubuntu 24.04 LTS",
     source: "https://ubuntu.com/download/desktop",
   },
@@ -625,7 +623,7 @@ window.softwareCatalog = [
     name: "LibreOffice",
     desc: "Suite gratuita para documentos, hojas de cálculo y presentaciones.",
     badge: "Sin costo",
-    image: extraImage("photo-1783115259399-3a5a3e0e4592"),
+    image: "media/products/software-libreoffice.webp",
     recommend: "LibreOffice",
     source: "https://www.libreoffice.org/",
   },
@@ -634,7 +632,7 @@ window.softwareCatalog = [
     name: "DaVinci Resolve",
     desc: "Edición de video, color y audio para proyectos audiovisuales.",
     badge: "Creadores",
-    image: extraImage("photo-1614963326505-843868e1d83a"),
+    image: "media/products/software-davinci-resolve.webp",
     recommend: "DaVinci Resolve",
     source: "https://www.blackmagicdesign.com/products/davinciresolve",
   },
@@ -643,7 +641,7 @@ window.softwareCatalog = [
     name: "Visual Studio Code",
     desc: "Editor extensible para web, scripts y desarrollo de software.",
     badge: "Programación",
-    image: extraImage("photo-1489875347897-49f64b51c1f8"),
+    image: "media/products/software-visual-studio-code.webp",
     recommend: "VS Code",
     source: "https://code.visualstudio.com/",
   },
@@ -652,7 +650,7 @@ window.softwareCatalog = [
     name: "Bitdefender",
     desc: "Protección multicapa para navegación, archivos y amenazas comunes.",
     badge: "Protección",
-    image: extraImage("photo-1614064641938-3bbee52942c7"),
+    image: "media/products/software-bitdefender.webp",
     recommend: "Bitdefender Antivirus Free",
     source: "https://www.bitdefender.com/consumer/antivirus",
   },
@@ -661,103 +659,103 @@ window.softwareCatalog = [
 // Dos alternativas adicionales por categoría para completar la comparativa de cuatro marcas.
 window.hardwareVariants = {
   procesadores: [
-    ["AMD", "Ryzen 7 5700X", "Q 1,399", "https://images.unsplash.com/photo-1555617778-02518510b9fa?auto=format&fit=crop&w=900&q=82"],
-    ["Intel", "Core i7-12700F", "Q 2,099", "https://images.unsplash.com/photo-1523655223303-4e9ef5234587?auto=format&fit=crop&w=900&q=82"],
+    ["AMD", "Ryzen 7 5700X", "Q 1,399", "media/products/procesadores-amd-ryzen-7-5700x.webp"],
+    ["Intel", "Core i7-12700F", "Q 2,099", "media/products/procesadores-intel-core-i7-12700f.webp"],
   ],
   motherboards: [
-    ["Gigabyte", "B550 AORUS Elite V2", "Q 1,449", "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=900&q=82"],
-    ["ASRock", "B550M Pro4", "Q 999", "https://images.unsplash.com/photo-1697952431907-8542919a16b3?auto=format&fit=crop&w=900&q=82"],
+    ["Gigabyte", "B550 AORUS Elite V2", "Q 1,449", "media/products/motherboards-gigabyte-b550-aorus-elite-v2.webp"],
+    ["ASRock", "B550M Pro4", "Q 999", "media/products/motherboards-asrock-b550m-pro4.webp"],
   ],
   ram: [
-    ["Crucial", "Ballistix 16 GB DDR4", "Q 429", "https://images.unsplash.com/photo-1676554565685-3aeb5d7ad1b7?auto=format&fit=crop&w=900&q=82"],
-    ["XPG", "Gammix D20 16 GB DDR4", "Q 419", "https://images.unsplash.com/photo-1672923491001-3e58a608e418?auto=format&fit=crop&w=900&q=82"],
+    ["Crucial", "Ballistix 16 GB DDR4", "Q 429", "media/products/ram-crucial-ballistix-16-gb-ddr4.webp"],
+    ["XPG", "Gammix D20 16 GB DDR4", "Q 419", "media/products/ram-xpg-gammix-d20-16-gb-ddr4.webp"],
   ],
   gpu: [
-    ["ASUS", "Dual RTX 4060 8 GB", "Q 2,899", "https://images.unsplash.com/photo-1555618565-9f2b0323a10d?auto=format&fit=crop&w=900&q=82"],
-    ["Sapphire", "Pulse RX 7600 8 GB", "Q 2,649", "https://images.unsplash.com/photo-1727895949000-da3c10a7d562?auto=format&fit=crop&w=900&q=82"],
+    ["ASUS", "Dual RTX 4060 8 GB", "Q 2,899", "media/products/gpu-asus-dual-rtx-4060-8-gb.webp"],
+    ["Sapphire", "Pulse RX 7600 8 GB", "Q 2,649", "media/products/gpu-sapphire-pulse-rx-7600-8-gb.webp"],
   ],
   storage: [
-    ["Western Digital", "WD Blue SN580 1 TB", "Q 699", "https://images.unsplash.com/photo-1760623227551-2eae8f9cb675?auto=format&fit=crop&w=900&q=82"],
-    ["Crucial", "P3 Plus 1 TB NVMe", "Q 649", "https://images.unsplash.com/photo-1677086586945-ef95ab632232?auto=format&fit=crop&w=900&q=82"],
+    ["Western Digital", "WD Blue SN580 1 TB", "Q 699", "media/products/storage-western-digital-wd-blue-sn580-1-tb.webp"],
+    ["Crucial", "P3 Plus 1 TB NVMe", "Q 649", "media/products/storage-crucial-p3-plus-1-tb-nvme.webp"],
   ],
   psu: [
-    ["EVGA", "600 W1 80+ White", "Q 499", "https://images.unsplash.com/photo-1778333895674-9158b2ce5371?auto=format&fit=crop&w=900&q=82"],
-    ["Thermaltake", "Smart BX1 650W Bronze", "Q 649", "https://images.unsplash.com/photo-1716506361698-f6eda7eb80c9?auto=format&fit=crop&w=900&q=82"],
+    ["EVGA", "600 W1 80+ White", "Q 499", "media/products/psu-evga-600-w1-80-white.webp"],
+    ["Thermaltake", "Smart BX1 650W Bronze", "Q 649", "media/products/psu-thermaltake-smart-bx1-650w-bronze.webp"],
   ],
   monitor: [
-    ["ASUS", "TUF VG249Q1A 24”", "Q 1,499", "https://images.unsplash.com/photo-1614179924047-e1ab49a0a0cf?auto=format&fit=crop&w=900&q=82"],
-    ["Acer", "Nitro KG241Y 24”", "Q 1,299", "https://images.unsplash.com/photo-1495954222046-2c427ecb546d?auto=format&fit=crop&w=900&q=82"],
+    ["ASUS", "TUF VG249Q1A 24”", "Q 1,499", "media/products/monitor-asus-tuf-vg249q1a-24.webp"],
+    ["Acer", "Nitro KG241Y 24”", "Q 1,299", "media/products/monitor-acer-nitro-kg241y-24.webp"],
   ],
   keyboard: [
-    ["Razer", "Ornata V3 X", "Q 599", "https://images.unsplash.com/photo-1626958390898-162d3577f293?auto=format&fit=crop&w=900&q=82"],
-    ["HyperX", "Alloy Origins Core", "Q 799", "https://images.unsplash.com/photo-1615869442320-fd02a129c77c?auto=format&fit=crop&w=900&q=82"],
+    ["Razer", "Ornata V3 X", "Q 599", "media/products/keyboard-razer-ornata-v3-x.webp"],
+    ["HyperX", "Alloy Origins Core", "Q 799", "media/products/keyboard-hyperx-alloy-origins-core.webp"],
   ],
   mouse: [
-    ["SteelSeries", "Rival 3", "Q 349", "https://images.unsplash.com/photo-1613141412501-9012977f1969?auto=format&fit=crop&w=900&q=82"],
-    ["HyperX", "Pulsefire Core", "Q 299", "https://images.unsplash.com/photo-1618247130379-980b9fe0df04?auto=format&fit=crop&w=900&q=82"],
+    ["SteelSeries", "Rival 3", "Q 349", "media/products/mouse-steelseries-rival-3.webp"],
+    ["HyperX", "Pulsefire Core", "Q 299", "media/products/mouse-hyperx-pulsefire-core.webp"],
   ],
   audio: [
-    ["Razer", "Barracuda X Wireless", "Q 899", "https://images.unsplash.com/photo-1677086813101-496781a0f327?auto=format&fit=crop&w=900&q=82"],
-    ["SteelSeries", "Arctis Nova 1", "Q 699", "https://images.unsplash.com/photo-1591105866700-cb5d708ccd93?auto=format&fit=crop&w=900&q=82"],
+    ["Razer", "Barracuda X Wireless", "Q 899", "media/products/audio-razer-barracuda-x-wireless.webp"],
+    ["SteelSeries", "Arctis Nova 1", "Q 699", "media/products/audio-steelseries-arctis-nova-1.webp"],
   ],
   network: [
-    ["ASUS", "PCE-AX3000 Wi-Fi 6", "Q 599", "https://images.unsplash.com/photo-1785175861969-b4518b2eaaa6?auto=format&fit=crop&w=900&q=82"],
-    ["Intel", "I225-V 2.5GbE", "Q 449", "https://images.unsplash.com/photo-1750711158632-5273ec9b9b86?auto=format&fit=crop&w=900&q=82"],
+    ["ASUS", "PCE-AX3000 Wi-Fi 6", "Q 599", "media/products/network-asus-pce-ax3000-wi-fi-6.webp"],
+    ["Intel", "I225-V 2.5GbE", "Q 449", "media/products/network-intel-i225-v-2-5gbe.webp"],
   ],
   webcam: [
-    ["Razer", "Kiyo Full HD", "Q 899", "https://images.unsplash.com/photo-1760348213920-d2a90ed705fd?auto=format&fit=crop&w=900&q=82"],
-    ["AverMedia", "PW315 Full HD", "Q 699", "https://images.unsplash.com/photo-1704364610940-52b509d3951f?auto=format&fit=crop&w=900&q=82"],
+    ["Razer", "Kiyo Full HD", "Q 899", "media/products/webcam-razer-kiyo-full-hd.webp"],
+    ["Logitech", "C270 HD", "Q 299", "media/products/webcam-logitech-c270-hd.webp"],
   ],
   cooling: [
-    ["Noctua", "NH-U12S redux", "Q 699", "https://images.unsplash.com/photo-1752421418220-75e3c8928bb4?auto=format&fit=crop&w=900&q=82"],
-    ["be quiet!", "Pure Rock 2", "Q 549", "https://images.unsplash.com/photo-1754928661655-dfc041ee51c5?auto=format&fit=crop&w=900&q=82"],
+    ["Noctua", "NH-U12S redux", "Q 699", "media/products/cooling-noctua-nh-u12s-redux.webp"],
+    ["be quiet!", "Pure Rock 2", "Q 549", "media/products/cooling-be-quiet-pure-rock-2.webp"],
   ],
   case: [
-    ["Fractal Design", "Pop Air", "Q 1,099", "https://images.unsplash.com/photo-1660855551550-2696677aaf28?auto=format&fit=crop&w=900&q=82"],
-    ["Thermaltake", "S200 TG ARGB", "Q 899", "https://images.unsplash.com/photo-1776496085673-4ff7823a80ca?auto=format&fit=crop&w=900&q=82"],
+    ["Fractal Design", "Pop Air", "Q 1,099", "media/products/case-fractal-design-pop-air.webp"],
+    ["Thermaltake", "S200 TG ARGB", "Q 899", "media/products/case-thermaltake-s200-tg-argb.webp"],
   ],
   fans: [
-    ["Noctua", "NF-P12 redux 120 mm", "Q 199", "https://images.unsplash.com/photo-1723310181453-4e37aa1a21d2?auto=format&fit=crop&w=900&q=82"],
-    ["DeepCool", "FC120 3-pack", "Q 449", "https://images.unsplash.com/photo-1753192698879-a937ac8c5d70?auto=format&fit=crop&w=900&q=82"],
+    ["Noctua", "NF-P12 redux 120 mm", "Q 199", "media/products/fans-noctua-nf-p12-redux-120-mm.webp"],
+    ["DeepCool", "FC120 3-pack", "Q 449", "media/products/fans-deepcool-fc120-3-pack.webp"],
   ],
   speakers: [
-    ["Edifier", "R980T 2.0", "Q 599", "https://images.unsplash.com/photo-1722473386296-bddf01fe58f4?auto=format&fit=crop&w=900&q=82"],
-    ["Creative", "Pebble Plus", "Q 449", "https://images.unsplash.com/photo-1747666095272-e53fc1593e2a?auto=format&fit=crop&w=900&q=82"],
+    ["Edifier", "R980T 2.0", "Q 599", "media/products/speakers-edifier-r980t-2-0.webp"],
+    ["Creative", "Pebble Plus", "Q 449", "media/products/speakers-creative-pebble-plus.webp"],
   ],
   microphone: [
-    ["Blue", "Snowball iCE USB", "Q 599", "https://images.unsplash.com/photo-1554200876-907f9286c2a1?auto=format&fit=crop&w=900&q=82"],
-    ["Razer", "Seiren Mini", "Q 499", "https://images.unsplash.com/photo-1772399764232-c35bac262ed6?auto=format&fit=crop&w=900&q=82"],
+    ["Blue", "Snowball iCE USB", "Q 599", "media/products/microphone-blue-snowball-ice-usb.webp"],
+    ["Razer", "Seiren Mini", "Q 499", "media/products/microphone-razer-seiren-mini.webp"],
   ],
   printer: [
-    ["Canon", "PIXMA G3160", "Q 1,599", "https://images.unsplash.com/photo-1706895040634-62055892cbbb?auto=format&fit=crop&w=900&q=82"],
-    ["Brother", "DCP-T520W", "Q 1,699", "https://images.unsplash.com/photo-1625961332771-3f40b0e2bdcf?auto=format&fit=crop&w=900&q=82"],
+    ["Canon", "PIXMA G3160", "Q 1,599", "media/products/printer-canon-pixma-g3160.webp"],
+    ["Brother", "DCP-T520W", "Q 1,699", "media/products/printer-brother-dcp-t520w.webp"],
   ],
   "external-ssd": [
-    ["SanDisk", "Extreme Portable SSD 1 TB", "Q 1,099", "https://images.unsplash.com/photo-1589995186011-a7b485edc4bf?auto=format&fit=crop&w=900&q=82"],
-    ["Crucial", "X9 1 TB", "Q 949", "https://images.unsplash.com/photo-1602493054445-4a0b4fa7fdd6?auto=format&fit=crop&w=900&q=82"],
+    ["SanDisk", "Extreme Portable SSD 1 TB", "Q 1,099", "media/products/external-ssd-sandisk-extreme-portable-ssd-1-tb.webp"],
+    ["Crucial", "X9 1 TB", "Q 949", "media/products/external-ssd-crucial-x9-1-tb.webp"],
   ],
   ups: [
-    ["CyberPower", "CP1000AVRLCD", "Q 999", "https://cdn.pixabay.com/photo/2018/08/31/17/33/power-supply-unit-3645170_640.jpg"],
-    ["Tripp Lite", "AVR750U", "Q 849", "https://cdn.pixabay.com/photo/2016/01/29/03/22/circuit-breakers-1167327_640.jpg"],
+    ["CyberPower", "CP1000AVRLCD", "Q 999", "media/products/ups-cyberpower-cp1000avrlcd.webp"],
+    ["Tripp Lite", "AVR750U", "Q 849", "media/products/ups-tripp-lite-avr750u.webp"],
   ],
   "sound-card": [
-    ["EVGA", "NU Audio", "Q 1,199", "https://images.unsplash.com/photo-1781656421351-04083169beb8?auto=format&fit=crop&w=900&q=82"],
-    ["SteelSeries", "GameDAC Gen 2", "Q 799", "https://images.unsplash.com/photo-1707254462427-38491f2ae8b2?auto=format&fit=crop&w=900&q=82"],
+    ["EVGA", "NU Audio", "Q 1,199", "media/products/sound-card-evga-nu-audio.webp"],
+    ["SteelSeries", "GameDAC Gen 2", "Q 799", "media/products/sound-card-steelseries-gamedac-gen-2.webp"],
   ],
   "card-reader": [
-    ["Anker", "USB-C 2-in-1 Card Reader", "Q 299", "https://images.unsplash.com/photo-1756143058666-029530345ac9?auto=format&fit=crop&w=900&q=82"],
-    ["Sabrent", "4-Slot USB Card Reader", "Q 349", "https://images.unsplash.com/photo-1632488507420-64f41ca8dd59?auto=format&fit=crop&w=900&q=82"],
+    ["Anker", "USB-C 2-in-1 Card Reader", "Q 299", "media/products/card-reader-anker-usb-c-2-in-1-card-reader.webp"],
+    ["Sabrent", "4-Slot USB Card Reader", "Q 349", "media/products/card-reader-sabrent-4-slot-usb-card-reader.webp"],
   ],
   gamepad: [
-    ["Xbox", "Wireless Controller", "Q 899", "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=900&q=82"],
-    ["GameSir", "G7 SE Wired", "Q 699", "https://images.unsplash.com/photo-1482855549413-2a6c9b1955a7?auto=format&fit=crop&w=900&q=82"],
+    ["Xbox", "Wireless Controller", "Q 899", "media/products/gamepad-xbox-wireless-controller.webp"],
+    ["GameSir", "G7 SE Wired", "Q 699", "media/products/gamepad-gamesir-g7-se-wired.webp"],
   ],
   projector: [
-    ["ViewSonic", "PA503W WXGA", "Q 3,999", "https://images.unsplash.com/photo-1579036095242-fe07594274ca?auto=format&fit=crop&w=900&q=82"],
-    ["Yaber", "V10 Full HD", "Q 2,499", "https://images.unsplash.com/photo-1638154320388-93039efa870b?auto=format&fit=crop&w=900&q=82"],
+    ["ViewSonic", "PA503W WXGA", "Q 3,999", "media/products/projector-viewsonic-pa503w-wxga.webp"],
+    ["Yaber", "V10 Full HD", "Q 2,499", "media/products/projector-yaber-v10-full-hd.webp"],
   ],
   mousepad: [
-    ["SteelSeries", "QcK Medium", "Q 179", "https://images.unsplash.com/photo-1703052404098-2a66d184aa9d?auto=format&fit=crop&w=900&q=82"],
-    ["Corsair", "MM350 Extended", "Q 349", "https://images.unsplash.com/photo-1769991442675-02ef3361883a?auto=format&fit=crop&w=900&q=82"],
+    ["SteelSeries", "QcK Medium", "Q 179", "media/products/mousepad-steelseries-qck-medium.webp"],
+    ["Corsair", "MM350 Extended", "Q 349", "media/products/mousepad-corsair-mm350-extended.webp"],
   ],
 };
