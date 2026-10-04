@@ -15,13 +15,16 @@
   // Piggyback on the existing scroll frame; no perpetual JS render loop.
   window.updateFloatingOrbs = () => {
     const distance = motion.matches ? 0 : window.scrollY;
+    const viewportWidth = innerWidth;
+    const amplitude = Math.min(viewportWidth * 0.055, 65);
     orbs.forEach((orb, index) => {
+      if (viewportWidth <= 700 && index >= 4) return;
       const phase = index * 1.65;
       const travel = distance / (750 + index * 180);
       const x = motion.matches
         ? 0
         : (Math.sin(travel + phase) - Math.sin(phase)) *
-          Math.min(innerWidth * 0.055, 65);
+          amplitude;
       const y = motion.matches
         ? 0
         : (Math.cos(travel * 0.8 + phase) - Math.cos(phase)) * 85;

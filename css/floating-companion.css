@@ -11,7 +11,8 @@
   top: 18%;
   width: var(--orb-size);
   height: var(--orb-size);
-  transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Scroll already updates once per frame; do not restart a CSS tween. */
+  will-change: transform;
 }
 
 .scroll-orb i {

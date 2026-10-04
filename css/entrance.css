@@ -1,0 +1,480 @@
+:root {
+  color-scheme: dark;
+  --sans: system-ui, sans-serif;
+  --atlas-accent: #72efd0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #e9f4ef;
+  font-family: var(--sans);
+  background: radial-gradient(ellipse at 50% 40%, #163549, #080f1d 55%, #050913);
+}
+
+.entrance {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  padding: 40px 24px;
+  overflow: clip;
+  perspective: 1400px;
+}
+
+.entrance-label {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-align: center;
+  color: #b7d6d0;
+}
+
+.entrance .book-cover {
+  text-decoration: none;
+  flex-shrink: 0;
+  isolation: isolate;
+  color: #ecf6ff;
+  border-color: #5889a4;
+  border-left-color: #172b3a;
+  background: linear-gradient(110deg, #ffffff0c, transparent 30%), linear-gradient(155deg, #20394b, #101d30 50%, #071420);
+  box-shadow: inset 5px 0 9px #0008, 4px 2px 0 #b0c8d5, 8px 4px 0 #465d71, 12px 6px 0 #c4d8e3, 16px 8px 0 #15334a, 18px 26px 45px #0008;
+  /* Keep the hit target stationary so taps and keyboard activation stay reliable. */
+  animation: none;
+  transition: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.book-cover > span {
+  position: relative;
+  z-index: 1;
+}
+
+.cover-circuits {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: #66bcd055;
+  pointer-events: none;
+}
+
+.energy-rays {
+  opacity: .7;
+}
+
+.entrance .cover-emblem {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #61d6e7;
+  border-radius: 16px;
+  background: #0a1726;
+  box-shadow: 0 0 0 7px #142e41, 0 0 0 8px #46768a, 0 0 35px #42c8e333;
+}
+
+.cover-emblem span {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border: 1px solid #41758a;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #285768, #122739);
+  color: #a5f3ff;
+  font: 800 30px/1 system-ui, sans-serif;
+}
+
+.entrance .cover-title em {
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 300;
+  color: #9ce5f2;
+}
+
+.entrance .cover-rule {
+  background: #ffc47a;
+}
+
+.entrance .cover-description {
+  color: #c4d8e7;
+}
+
+.entrance .cover-open {
+  padding-top: 18px;
+  border-top: 1px solid #365569;
+  color: #b1f3ff;
+}
+
+.is-entering .book-cover,
+.is-away .book-cover,
+.is-entering .energy-rays,
+.is-away .energy-rays {
+  animation-play-state: paused;
+}
+
+@keyframes tech-float {
+  0%, 100% { transform: translateY(0) rotateY(-12deg); }
+  50% { transform: translateY(-10px) rotateY(-9deg); }
+}
+
+@keyframes energy-breathe {
+  0%, 100% { opacity: .45; }
+  50% { opacity: .95; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entrance .book-cover,
+  .energy-rays {
+    animation: none;
+  }
+}
+
+.entrance-caption {
+  margin: 0;
+  color: #bdd1ce;
+  font-size: 17px;
+  text-align: center;
+}
+
+.book-effects {
+  position: relative;
+  perspective: 1400px;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 250ms ease-out;
+}
+
+.book-effects::before,
+.book-effects::after {
+  content: "";
+  position: absolute;
+  inset: 18% -18%;
+  border: 1px solid #79e9ff44;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: rotate(-25deg) scale(.9);
+  opacity: .35;
+}
+
+.book-effects::after {
+  inset: 8% -9%;
+  transform: rotate(22deg);
+  border-color: #ffc47a33;
+}
+
+.book-cover .cover-light {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cover-light::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: linear-gradient(115deg, transparent 38%, #8de7ff18 48%, #ffffff20 50%, transparent 62%);
+  transform: translateX(-75%);
+  animation: holographic-sweep 7s ease-in-out infinite;
+}
+
+.cover-light::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: -110px;
+  top: -110px;
+  background: radial-gradient(circle, #aeedff24, transparent 68%);
+  transform: translate(var(--light-x, 150px), var(--light-y, 160px));
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.book-effects.is-pointing .cover-light::after {
+  opacity: 1;
+}
+
+.circuit-pulses {
+  fill: none;
+  stroke: #e1fcff;
+  stroke-width: 2;
+  stroke-dasharray: 12 180;
+  /* Keep the circuit texture cached; the cover sweep supplies the motion. */
+  opacity: .65;
+}
+
+.energy-field {
+  position: absolute;
+  inset: -25px;
+  pointer-events: none;
+}
+
+.energy-field i {
+  position: absolute;
+  width: 3px;
+  height: 22px;
+  border-radius: 3px;
+  background: #97eeff;
+  box-shadow: 0 0 10px #6ee3ff;
+  left: -5%;
+  top: 65%;
+  animation: energy-rise 5s ease-in-out infinite;
+}
+
+.energy-field i:nth-child(2) { left: 105%; top: 85%; animation-delay: -2s; }
+.energy-field i:nth-child(3) { left: 101%; top: 35%; animation-delay: -3.5s; }
+.energy-field i:nth-child(4) { left: -9%; top: 30%; animation-delay: -1s; }
+.energy-field i:nth-child(5) { left: 50%; top: 104%; animation-delay: -4s; background: #ffc47a; }
+.energy-field i:nth-child(6) { left: 85%; top: 0; animation-delay: -2.5s; }
+
+.is-entering .book-effects::before {
+  animation: entry-wave 850ms ease-out both;
+}
+
+.is-entering .book-effects::after {
+  animation: entry-wave 850ms 100ms ease-out both;
+}
+
+.is-entering .cover-light::before,
+.is-entering .circuit-pulses,
+.is-entering .energy-field i,
+.is-away .cover-light::before,
+.is-away .circuit-pulses,
+.is-away .energy-field i {
+  animation-play-state: paused;
+}
+
+@keyframes holographic-sweep {
+  0%, 20% { transform: translateX(-75%); }
+  70%, 100% { transform: translateX(75%); }
+}
+
+@keyframes circuit-travel {
+  to { stroke-dashoffset: -384; }
+}
+
+@keyframes energy-rise {
+  0%, 100% { transform: translateY(0) scaleY(.3); opacity: 0; }
+  35% { opacity: .7; }
+  80% { transform: translateY(-70px) scaleY(1); opacity: 0; }
+}
+
+@keyframes entry-wave {
+  from { transform: scale(.8); opacity: .8; }
+  to { transform: scale(2); opacity: 0; }
+}
+
+@media (pointer: coarse) {
+  .energy-field i:nth-child(n+4) { display: none; }
+  .circuit-pulses { animation-duration: 8s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-effects { transform: none; transition: none; }
+  .cover-light::before,
+  .circuit-pulses,
+  .energy-field i,
+  .is-entering .book-effects::before,
+  .is-entering .book-effects::after { animation: none; }
+  .energy-field { display: none; }
+}
+
+@media (max-height: 740px) {
+  .entrance {
+    gap: 24px;
+    padding-block: 28px;
+  }
+
+  .entrance .book-cover {
+    min-height: 440px;
+    padding-block: 24px;
+  }
+
+  .cover-emblem {
+    margin-block: 20px;
+  }
+}
+
+/* Full-screen technological stage; all large surfaces remain static. */
+.tech-universe {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(ellipse at 50% 45%, #143d4d 0, #091a29 44%, #040a14 85%);
+}
+.tech-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#7ad6e30b 1px, transparent 1px), linear-gradient(90deg, #7ad6e30b 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse, transparent 20%, #000 85%);
+}
+.tech-orbit {
+  position: absolute;
+  width: min(80vw, 1100px);
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  border: 1px solid #75d9ef24;
+  border-radius: 50%;
+  animation: orbital-turn 50s linear infinite;
+}
+.tech-orbit::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 50%;
+  top: -4px;
+  border-radius: 50%;
+  background: #a5f8ed;
+  box-shadow: 0 0 18px #7be8e8;
+}
+.orbit-two {
+  width: min(95vw, 1400px);
+  border-style: dashed;
+  border-color: #f6bd7120;
+  animation-duration: 80s;
+  animation-direction: reverse;
+}
+.orbit-two::before {
+  background: #ffc47a;
+}
+.universe-circuits {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #6ddbd354;
+}
+.universe-nodes {
+  opacity: .8;
+}
+.tech-coordinate {
+  position: absolute;
+  top: 50%;
+  color: #93bbcb;
+  font: 11px/1.4 ui-monospace, monospace;
+  letter-spacing: .18em;
+  writing-mode: vertical-rl;
+}
+.coordinate-left {
+  left: 30px;
+  transform: rotate(180deg);
+}
+.coordinate-right {
+  right: 30px;
+}
+.entrance {
+  width: 100%;
+  min-height: 100svh;
+  gap: clamp(18px, 3vh, 34px);
+  padding-block: clamp(24px, 4vh, 48px);
+}
+.entrance .book-cover {
+  width: min(460px, 80vw);
+  min-height: min(650px, 72svh);
+  padding: clamp(26px, 4vw, 42px);
+  padding-left: clamp(32px, 5vw, 52px);
+  justify-content: space-between;
+}
+.entrance .cover-title {
+  font-size: clamp(32px, 4.5vw, 48px);
+}
+.entrance .cover-description {
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.65;
+}
+.entrance .cover-open {
+  width: 100%;
+}
+.book-cover:focus-visible {
+  outline: 3px solid #a5f8ed;
+  outline-offset: 12px;
+}
+.is-away .tech-orbit,
+.is-away .universe-nodes {
+  animation-play-state: paused;
+}
+@keyframes orbital-turn {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (max-width: 620px) {
+  .tech-coordinate {
+    display: none;
+  }
+  .tech-orbit {
+    width: 130vw;
+  }
+  .orbit-two {
+    display: none;
+  }
+  .entrance .cover-emblem {
+    width: 80px;
+    height: 80px;
+    margin-block: 24px;
+  }
+  .cover-emblem span {
+    width: 58px;
+    height: 58px;
+  }
+  .entrance .book-cover {
+    min-height: min(550px, 72svh);
+  }
+}
+@media (max-height: 530px) and (min-width: 621px) {
+  .entrance {
+    gap: 16px;
+    padding: 24px;
+  }
+  .entrance .book-cover {
+    min-height: 270px;
+    width: min(540px, 80vw);
+    padding: 16px 28px;
+  }
+  .entrance .cover-emblem {
+    display: none;
+  }
+  .entrance .cover-title {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+  .entrance .cover-title em {
+    font-size: 1.2em;
+  }
+  .entrance .cover-description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .entrance .cover-rule {
+    margin-block: 12px;
+  }
+  .entrance .cover-open {
+    margin-top: 12px;
+    padding-top: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tech-orbit,
+  .universe-nodes {
+    animation: none;
+  }
+  .tech-orbit {
+    transform: translate(-50%, -50%);
+  }
+}

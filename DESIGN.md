@@ -171,3 +171,13 @@ FOX is a compact fox mascot inside the hero, with pointed ears, a pale muzzle, a
 - **Don't** use the pale light-theme background without the dark, high-contrast text tokens.
 - **Don't** add large black media boxes behind the hero laptop.
 - **Don't** turn every card, heading, or section into a neon accent; contrast needs quiet areas to work.
+
+## 2026-10-04 — Portada inmersiva y elecciones editoriales
+
+La portada se plantea como un libro suspendido en un campo de circuitos que ocupa toda la pantalla. El libro sigue siendo el único acceso principal, sin agregar controles decorativos. Cian frío y ámbar puntual conectan las órbitas con los trazos de la cubierta.
+
+La apertura se sincroniza con la disponibilidad del siguiente documento mediante una transición nativa progresiva: no desaparece primero el contenido para esperar después la descarga. Sin soporte o con movimiento reducido, se conserva un enlace normal.
+
+En las categorías, la elección editorial lleva una insignia y un panel de lectura tranquila. Cada párrafo identifica una necesidad, una opción concreta y una condición de compra; no declara un ganador absoluto ni inventa resultados de pruebas o precios.
+
+Revisado en 375, 768 y 1440 px y en móvil horizontal. Resultado y límites en tests/QA-entry-recommendations.md. La guía de diseño ECC orientó la jerarquía, el contraste y el uso contenido de movimiento; no se agregó una dependencia de animación.

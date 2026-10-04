@@ -118,7 +118,22 @@
 
 .circuit-flow {
   stroke-dasharray: 20 320;
-  animation: circuit-travel 6s linear infinite;
+  opacity: .65;
+}
+
+/* A composited light sweep replaces continuous SVG path repainting. */
+.holo-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 35%, #8fffe716 50%, transparent 65%);
+  animation: screen-sweep 7s ease-in-out infinite;
+}
+
+@keyframes screen-sweep {
+  0%, 15% { transform: translateX(-100%); }
+  85%, 100% { transform: translateX(100%); }
 }
 
 .holo-processor {
@@ -303,7 +318,9 @@ body.light-theme .holo-base {
 }
 
 .scene-paused .holo-scene *,
-.motion-paused .holo-scene * {
+.motion-paused .holo-scene *,
+.scene-paused .holo-screen::after,
+.motion-paused .holo-screen::after {
   animation-play-state: paused;
 }
 
@@ -404,7 +421,8 @@ body.light-theme .holo-base {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .holo-scene * {
+  .holo-scene *,
+  .holo-screen::after {
     animation: none !important;
   }
 }
