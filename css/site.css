@@ -237,6 +237,27 @@ button:disabled {
   font-size: 1.35rem;
   letter-spacing: -.03em;
 }
+.product-price {
+  display: grid;
+  gap: 4px;
+  margin: -8px 0 18px;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface) 78%, var(--accent) 8%);
+}
+.product-price span,
+.product-price small {
+  color: var(--muted);
+  font-size: 12px;
+}
+.product-price strong {
+  font-size: 1.3rem;
+  letter-spacing: -.025em;
+}
+.product-copy .price-source {
+  margin-top: 0;
+}
 .product-copy dl {
   margin: 0 0 25px;
 }

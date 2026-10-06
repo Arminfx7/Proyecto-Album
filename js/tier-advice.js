@@ -26,6 +26,21 @@ window.tierAdvice = {
     "El 990 EVO de 1 TB sería una opción que revisaría para sistema y aplicaciones. Compararía la interfaz admitida por mi equipo y el espacio que necesito.",
     "Mi punto de partida sería el 990 PRO de 2 TB. Antes de pagar por PCIe 5.0, comprobaría si mi placa lo admite y si mi trabajo aprovechará esa diferencia."
   ],
+  "hdd": [
+    "Para guardar archivos y respaldos, empezaría por el WD Blue de 1 TB si mi equipo admite una unidad de 2.5 pulgadas. No lo usaría como sustituto de un SSD para el sistema operativo.",
+    "Yo compararía el BarraCuda de 4 TB para una PC de escritorio que necesite bastante espacio. Revisaría la bahía y mantendría otra copia de los archivos importantes.",
+    "Elegiría un modelo para NAS o vigilancia solo si ese será su trabajo continuo. Para una computadora de uso común, no pagaría el extra de esas líneas especializadas.",
+  ],
+  "scanner": [
+    "Para digitalizar documentos y fotos de vez en cuando, consideraría el LiDE 300. Si necesito procesar varias hojas seguidas, buscaría uno con alimentador automático.",
+    "Para una oficina pequeña, empezaría comparando el DS-410: su alimentador y escaneo dúplex ayudan con lotes de documentos. Confirmaría el volumen diario que soporta.",
+    "Si varios usuarios o un flujo intenso necesitan escanear, miraría el DS-730N por su conexión de red. Para casa o uso ocasional, me quedaría con una opción más sencilla.",
+  ],
+  "microcontrollers": [
+    "Para aprender a programar y conectar sensores, empezaría con el UNO R3: está muy documentado y es sencillo de seguir en tutoriales. Confirmaría que el vendedor indique si es original o compatible.",
+    "Para un primer proyecto IoT, elegiría el ESP32 DevKit V1 si necesito Wi-Fi y Bluetooth integrados. Revisaría el voltaje lógico de 3.3 V antes de conectar módulos de 5 V.",
+    "Si necesito más pines para robótica, me inclinaría por el Mega 2560 compatible; para conectividad integrada o un diseño pequeño, compararía el UNO R4 WiFi o el Pico 2. La elección depende del proyecto, no solo de la gama.",
+  ],
   "psu": [
     "Consideraría la CX650 para un armado cuyo consumo y conectores encajen con ella. No decidiría únicamente por los watts o el sello de eficiencia.",
     "Revisaría la RM650 si busco una fuente modular para un equipo de consumo compatible. Confirmaría la revisión exacta y usaría únicamente sus cables.",

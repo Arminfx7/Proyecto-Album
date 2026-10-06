@@ -1,41 +1,171 @@
-/* The browser holds the old document until the destination can be painted. */
+/* Keep navigation native while morphing the book cover into the album scene. */
 @view-transition {
   navigation: auto;
 }
 
 ::view-transition-group(root) {
-  animation-duration: 650ms;
+  animation-duration: 1120ms;
+  animation-timing-function: cubic-bezier(.2, .72, .16, 1);
 }
 
 ::view-transition-old(root) {
-  animation: album-depart 650ms cubic-bezier(.22, 1, .36, 1) both;
+  animation: page-depart 1120ms cubic-bezier(.2, .72, .16, 1) both;
   mix-blend-mode: normal;
 }
 
 ::view-transition-new(root) {
-  animation: album-arrive 650ms cubic-bezier(.22, 1, .36, 1) both;
+  animation: page-arrive 1120ms cubic-bezier(.2, .72, .16, 1) both;
   mix-blend-mode: normal;
 }
 
-@keyframes album-depart {
-  from {
+/* A named element survives the document swap: the cover itself becomes the
+   holographic computer scene, so the user sees one continuous opening motion. */
+#enter-site {
+  view-transition-name: album-opening;
+}
+
+.album-opening-target {
+  view-transition-name: album-opening;
+}
+
+/* Pause ambient CSS motion while snapshots are being composed, especially on
+   phones where the book-fold is the animation that deserves GPU time. */
+.is-entering *,
+.is-revealing * {
+  animation-play-state: paused !important;
+}
+
+::view-transition-group(album-opening) {
+  animation-duration: 1120ms;
+  animation-timing-function: cubic-bezier(.22, .72, .16, 1);
+  perspective: 1500px;
+  overflow: visible;
+}
+
+::view-transition-image-pair(album-opening) {
+  isolation: isolate;
+}
+
+::view-transition-old(album-opening) {
+  z-index: 2;
+  backface-visibility: hidden;
+  transform-origin: left center;
+  animation: cover-fold-away 1120ms cubic-bezier(.58, .02, .18, 1) both;
+}
+
+::view-transition-new(album-opening) {
+  z-index: 1;
+  backface-visibility: hidden;
+  transform-origin: left center;
+  animation: album-scene-unfold 1120ms cubic-bezier(.2, .72, .16, 1) both;
+}
+
+@keyframes cover-fold-away {
+  0% {
     opacity: 1;
-    transform: perspective(1400px) rotateY(0) scale(1);
+    transform: perspective(1500px) rotateY(-12deg) scale(1);
   }
-  to {
+  38% {
+    opacity: 1;
+    transform: perspective(1500px) rotateY(-82deg) scale(.96);
+  }
+  100% {
     opacity: 0;
-    transform: perspective(1400px) rotateY(-8deg) scale(1.06);
+    transform: perspective(1500px) rotateY(-158deg) scale(.91);
   }
 }
 
-@keyframes album-arrive {
+@keyframes album-scene-unfold {
+  0% {
+    opacity: .18;
+    transform: perspective(1500px) rotateY(68deg) scale(.92);
+  }
+  42% {
+    opacity: .78;
+    transform: perspective(1500px) rotateY(24deg) scale(.97);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1500px) rotateY(0) scale(1);
+  }
+}
+
+@keyframes page-depart {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-arrive {
   from {
     opacity: 0;
-    transform: translateY(16px) scale(.985);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-group(album-opening),
+  ::view-transition-old(album-opening),
+  ::view-transition-new(album-opening) {
+    animation-duration: 920ms;
+  }
+
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-timing-function: cubic-bezier(.2, .72, .16, 1);
+  }
+
+  ::view-transition-group(album-opening) {
+    perspective: 900px;
+  }
+
+  ::view-transition-old(album-opening) {
+    animation-name: cover-fold-mobile;
+    animation-timing-function: cubic-bezier(.48, .04, .2, 1);
+  }
+
+  ::view-transition-new(album-opening) {
+    animation-name: scene-unfold-mobile;
+    animation-timing-function: cubic-bezier(.2, .72, .16, 1);
+  }
+}
+
+@keyframes cover-fold-mobile {
+  0% {
+    opacity: 1;
+    transform: perspective(900px) rotateY(-12deg);
+  }
+  45% {
+    opacity: 1;
+    transform: perspective(900px) rotateY(-76deg);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(900px) rotateY(-148deg);
+  }
+}
+
+@keyframes scene-unfold-mobile {
+  0% {
+    opacity: .18;
+    transform: perspective(900px) rotateY(56deg);
+  }
+  45% {
+    opacity: .8;
+    transform: perspective(900px) rotateY(18deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(900px) rotateY(0);
   }
 }
 
@@ -44,7 +174,9 @@
     navigation: none;
   }
   ::view-transition-old(root),
-  ::view-transition-new(root) {
+  ::view-transition-new(root),
+  ::view-transition-old(album-opening),
+  ::view-transition-new(album-opening) {
     animation: none;
   }
 }

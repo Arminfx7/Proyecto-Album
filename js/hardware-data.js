@@ -189,8 +189,8 @@ const components = [
   {
     id: "storage",
     number: "05",
-    name: "Almacenamiento",
-    short: "Velocidad que se siente",
+    name: "SSD internos",
+    short: "Unidades SATA y NVMe para tu equipo",
     group: "interno",
     tag: "Más rápido",
     products: [

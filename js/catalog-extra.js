@@ -599,6 +599,91 @@ window.hardwareExtras = [
     ideal: "Gaming · diseño · oficina",
   },
 ];
+
+const addedHardwareImagePaths = {
+  "Western Digital|WD Blue 1 TB 2.5\"": "media/products/hdd-wd-blue-mobile.png",
+  "Seagate|BarraCuda 2 TB 3.5\"": "media/products/hdd-seagate-barracuda.jpg",
+  "Western Digital|WD Blue 4 TB 3.5\"": "media/products/hdd-wd-blue-desktop.png",
+  "Seagate|BarraCuda 4 TB 3.5\"": "media/products/hdd-seagate-barracuda.jpg",
+  "Seagate|IronWolf 4 TB": "media/products/hdd-seagate-ironwolf.jpg",
+  "Western Digital|WD Red Plus 4 TB": "media/products/hdd-wd-red-plus.png",
+  "Western Digital|WD Purple 6 TB": "media/products/hdd-wd-purple.png",
+  "Seagate|SkyHawk 8 TB": "media/products/hdd-seagate-skyhawk.jpg",
+  "Seagate|IronWolf Pro 16 TB": "media/products/hdd-seagate-ironwolf-pro.jpg",
+  "Canon|CanoScan LiDE 300": "media/products/scanner-canon-lide-300.png",
+  "Canon|CanoScan LiDE 400": "media/products/scanner-canon-lide-400.png",
+  "Epson|WorkForce DS-C330": "media/products/scanner-epson-ds-c330.jpg",
+  "Epson|WorkForce DS-410": "media/products/scanner-epson-ds-410.jpg",
+  "Epson|WorkForce DS-530 II": "media/products/scanner-epson-ds-530-ii.jpg",
+  "Epson|WorkForce ES-400 II": "media/products/scanner-epson-ds-530-es400.jpg",
+  "Epson|WorkForce DS-730N": "media/products/scanner-epson-ds-730n.jpg",
+  "Epson|WorkForce DS-770 II": "media/products/scanner-epson-ds-770-ii.jpg",
+  "Epson|WorkForce DS-870": "media/products/scanner-epson-ds-870.jpg",
+  "Arduino|UNO R3": "media/products/mcu-arduino-uno-r3.jpg",
+  "Raspberry Pi|Pico": "media/products/mcu-raspberry-pi-pico.jpg",
+  "Espressif|ESP8266 NodeMCU": "media/products/mcu-nodemcu-esp8266.jpg",
+  "Espressif|ESP32 DevKit V1": "media/products/mcu-esp32-devkit-v1.jpg",
+  "Espressif|ESP32-C3 Super Mini": "media/products/mcu-esp32-c3-super-mini.jpg",
+  "Waveshare|RP2040-Zero": "media/products/mcu-waveshare-rp2040-zero.jpg",
+  "Arduino|UNO R4 WiFi": "media/products/mcu-arduino-uno-r4-wifi.jpg",
+  "Genérica|Mega 2560 compatible": "media/products/mcu-arduino-mega-2560.jpg",
+  "Raspberry Pi|Pico 2": "media/products/mcu-raspberry-pi-pico-2.jpg",
+};
+
+const localHardwareProduct = (brand, model, price, shop, priceSource, specs, source) => ({
+  brand, model, price, shop, place: "Precio de referencia en Guatemala",
+  priceSource, priceDate: "2026-10-05", image: addedHardwareImagePaths[`${brand}|${model}`] || null, source,
+  specs: specs.map((value, index) => [["Especificación", "Uso recomendado", "Conexión", "Formato"][index], value]),
+});
+
+window.hardwareExtras.push(
+  {
+    id: "hdd", number: "26", name: "HDD internos", short: "Capacidad amplia para archivos y respaldos",
+    group: "interno", tag: "Almacenamiento",
+    products: [
+      localHardwareProduct("Western Digital", "WD Blue 1 TB 2.5\"", "Q 552", "Mivoot", "https://mivoot.com/gt/producto/disco-duro-1tb-wd-blue-2-5/", ["1 TB · 5400 rpm", "Laptop y almacenamiento secundario", "SATA 6 Gb/s", "2.5 pulgadas"], "https://www.westerndigital.com/products/internal-drives/wd-blue-mobile-sata-hdd"),
+      localHardwareProduct("Seagate", "BarraCuda 2 TB 3.5\"", "Q 620", "Mivoot", "https://mivoot.com/gt/producto/disco-duro-2tb-interno-seagate-barracuda-3-5-2/", ["2 TB · 7200 rpm", "PC de escritorio y archivos", "SATA", "3.5 pulgadas"], "https://www.seagate.com/products/hard-drives/barracuda-hard-drive/"),
+      localHardwareProduct("Western Digital", "WD Blue 4 TB 3.5\"", "Q 1,062", "Mivoot", "https://mivoot.com/gt/producto/disco-duro-interno-4tb-western-digital-blue-3-5/", ["4 TB · 5400 rpm", "Bibliotecas y respaldos", "SATA III", "3.5 pulgadas"], "https://www.westerndigital.com/products/internal-drives/wd-blue-desktop-sata-hdd"),
+      localHardwareProduct("Seagate", "BarraCuda 4 TB 3.5\"", "Q 1,146", "Mivoot", "https://mivoot.com/gt/producto/disco-duro-4tb-interno-seagate-barracuda-3-5/", ["4 TB", "Archivos de escritorio", "SATA", "3.5 pulgadas"], "https://www.seagate.com/products/hard-drives/barracuda-hard-drive/"),
+      localHardwareProduct("Seagate", "IronWolf 4 TB", "Por consultar", "Distribuidor local", null, ["4 TB · NAS", "Almacenamiento conectado en red", "SATA", "3.5 pulgadas"], "https://www.seagate.com/products/nas-drives/ironwolf-hard-drive/"),
+      localHardwareProduct("Western Digital", "WD Red Plus 4 TB", "Por consultar", "Distribuidor local", null, ["4 TB · NAS", "NAS doméstico y pequeña oficina", "SATA", "3.5 pulgadas"], "https://www.westerndigital.com/products/internal-drives/wd-red-plus-sata-hdd"),
+      localHardwareProduct("Western Digital", "WD Purple 6 TB", "Q 2,185", "Mivoot", "https://mivoot.com/gt/categoria/disco-duro/disco-duro-vigilancia/", ["6 TB · vigilancia", "Grabación continua en CCTV", "SATA", "3.5 pulgadas"], "https://www.westerndigital.com/products/internal-drives/wd-purple-sata-hdd"),
+      localHardwareProduct("Seagate", "SkyHawk 8 TB", "Q 3,390", "Mivoot", "https://mivoot.com/gt/categoria/disco-duro/disco-duro-vigilancia/", ["8 TB · vigilancia", "DVR/NVR y grabación continua", "SATA", "3.5 pulgadas"], "https://www.seagate.com/products/surveillance-drives/skyhawk-hard-drive/"),
+      localHardwareProduct("Seagate", "IronWolf Pro 16 TB", "Q 5,950", "Mivoot", "https://mivoot.com/gt/categoria/disco-duro/disco-duro-vigilancia/", ["16 TB · NAS Pro", "NAS de alta capacidad", "SATA", "3.5 pulgadas"], "https://www.seagate.com/products/nas-drives/ironwolf-pro-hard-drive/"),
+    ],
+  },
+  {
+    id: "scanner", number: "27", name: "Escáneres", short: "Digitaliza documentos y fotografías",
+    group: "externo", tag: "Oficina",
+    products: [
+      localHardwareProduct("Canon", "CanoScan LiDE 300", "Q 518", "Kemik", "https://www.kemik.gt/canon?category=escaneres&page=1", ["4800 × 2400 dpi", "Fotos y documentos ocasionales", "USB", "Plano · tamaño carta"], "https://www.usa.canon.com/shop/p/canoscan-lide-300"),
+      localHardwareProduct("Canon", "CanoScan LiDE 400", "Q 727", "Kemik", "https://www.kemik.gt/escaner-de-documentos-canon-lide-400", ["4800 × 4800 dpi", "Fotos y documentos con detalle", "USB-C", "Plano · tamaño carta"], "https://www.usa.canon.com/shop/p/canoscan-lide-400"),
+      localHardwareProduct("Epson", "WorkForce DS-C330", "Q 2,830", "Kemik", "https://www.kemik.gt/epson-ds-c330-escaner-de-documentos-duplex-a-color-blanco-con-negro", ["Dúplex a color", "Digitalización compacta de oficina", "USB", "Alimentador automático"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-DS-C330-Color-Duplex-Document-Scanner/p/B11B272201"),
+      localHardwareProduct("Epson", "WorkForce DS-410", "Q 3,585", "Mivoot", "https://mivoot.com/gt/producto/escaner-de-documentos-duplex-a-color-ds-410-epson/", ["Hasta 26 ppm / 52 ipm", "Documentos de oficina", "USB", "ADF de 50 hojas"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-DS-410-Color-Duplex-Document-Scanner/p/B11B249201"),
+      localHardwareProduct("Epson", "WorkForce DS-530 II", "Q 3,594", "Kemik", "https://www.kemik.gt/epson?category=escaneres", ["Dúplex · alto volumen", "Digitalización frecuente", "USB", "ADF de documentos"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-DS-530-II-Color-Duplex-Document-Scanner/p/B11B261201"),
+      localHardwareProduct("Epson", "WorkForce ES-400 II", "Q 4,000", "Kemik", "https://www.kemik.gt/epson?category=escaneres", ["Dúplex a color", "Pequeñas oficinas y grupos de trabajo", "USB", "ADF de documentos"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-ES-400-II-Color-Duplex-Document-Scanner/p/B11B261202"),
+      localHardwareProduct("Epson", "WorkForce DS-730N", "Q 5,210", "Kemik", "https://www.kemik.gt/epson?category=escaneres", ["Red Ethernet", "Digitalización compartida en oficina", "USB · Ethernet", "ADF de alto volumen"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-DS-730N-Network-Color-Duplex-Document-Scanner/p/B11B259201"),
+      localHardwareProduct("Epson", "WorkForce DS-770 II", "Q 5,915", "Mivoot", "https://mivoot.com/gt/producto/escaner-de-documentos-duplex-a-color-ds-770-ii-epson/", ["Dúplex · alto rendimiento", "Flujos intensivos de documentos", "USB", "ADF de trabajo"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-DS-770-II-Color-Duplex-Document-Scanner/p/B11B262201"),
+      localHardwareProduct("Epson", "WorkForce DS-870", "Q 6,250", "Mivoot", "https://mivoot.com/gt/producto/escaner-de-documentos-duplex-a-color-workforce-ds-870-epson/", ["Dúplex · alta velocidad", "Oficina con grandes volúmenes", "USB", "ADF de alto volumen"], "https://epson.com/For-Work/Scanners/Document-Scanners/WorkForce-DS-870-Color-Duplex-Document-Scanner/p/B11B250201"),
+    ],
+  },
+  {
+    id: "microcontrollers", number: "28", name: "Microcontroladores", short: "Placas programables para crear proyectos electrónicos",
+    group: "interno", tag: "Electrónica",
+    products: [
+      localHardwareProduct("Arduino", "UNO R3", "Q 279", "Oxdea", "https://oxdea.gt/product/arduino-uno-original-rev3/", ["ATmega328P · 16 MHz", "Aprender electrónica y prototipado", "USB-B · UART · SPI · I²C", "14 digitales · 6 analógicas"], "https://store.arduino.cc/products/arduino-uno-rev3"),
+      localHardwareProduct("Raspberry Pi", "Pico", "Por consultar", "Kemik", "https://www.kemik.gt/raspberry-pi-modelo-pico", ["RP2040 · doble núcleo · 133 MHz", "Control y proyectos educativos", "Micro-USB · UART · SPI · I²C", "26 GPIO · 264 KB SRAM"], "https://www.raspberrypi.com/products/raspberry-pi-pico/"),
+      localHardwareProduct("Espressif", "ESP8266 NodeMCU", "Por consultar", "Kemik", "https://www.kemik.gt/tarjetas-programables?page=0", ["ESP8266 · Wi-Fi 2.4 GHz", "IoT básico y domótica", "Micro-USB · Wi-Fi · UART", "GPIO · ADC · PWM"], "https://www.espressif.com/en/products/socs/esp8266"),
+      localHardwareProduct("Espressif", "ESP32 DevKit V1", "Q 110", "Kemik", "https://www.kemik.gt/tettsa-modulo-esp32-wifi-bluetooth-antena", ["ESP32 dual-core · Wi-Fi y Bluetooth", "IoT con sensores y conectividad", "USB · Wi-Fi · Bluetooth · UART", "GPIO · ADC · DAC · PWM"], "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html"),
+      localHardwareProduct("Espressif", "ESP32-C3 Super Mini", "Q 97", "Kemik", "https://www.kemik.gt/tarjetas-programables?page=0", ["RISC-V · Wi-Fi · Bluetooth LE", "IoT compacto y bajo consumo", "USB-C · inalámbrica", "GPIO · ADC · PWM"], "https://www.espressif.com/en/products/socs/esp32-c3"),
+      localHardwareProduct("Waveshare", "RP2040-Zero", "Q 137", "Kemik", "https://www.kemik.gt/waveshare", ["RP2040 dual-core · 133 MHz", "Robótica y proyectos compactos", "USB-C · SPI · I²C · UART", "264 KB SRAM · 2 MB Flash"], "https://www.waveshare.com/rp2040-zero.htm"),
+      localHardwareProduct("Arduino", "UNO R4 WiFi", "Q 355", "Kemik", "https://www.kemik.gt/tarjetas-programables?page=0", ["RA4M1 32-bit · 48 MHz", "Prototipos conectados y automatización", "USB-C · Wi-Fi · Bluetooth · CAN", "14 digitales · matriz LED"], "https://store.arduino.cc/products/uno-r4-wifi"),
+      localHardwareProduct("Genérica", "Mega 2560 compatible", "Q 199", "Kemik", "https://www.kemik.gt/tarjetas-programables?page=0", ["ATmega2560 · 16 MHz", "Robótica con más entradas/salidas", "USB-B · UART · SPI · I²C", "54 digitales · 16 analógicas"], "https://store.arduino.cc/products/arduino-mega-2560-rev3"),
+      localHardwareProduct("Raspberry Pi", "Pico 2", "Por consultar", "Kemik", "https://www.kemik.gt/raspberry-pi", ["RP2350 · doble núcleo · 150 MHz", "Control y cómputo embebido avanzado", "Micro-USB · UART · SPI · I²C", "520 KB SRAM · 4 MB Flash"], "https://www.raspberrypi.com/products/raspberry-pi-pico-2/"),
+    ],
+  }
+);
+
 window.softwareCatalog = [
   {
     type: "Sistema operativo",
@@ -678,6 +763,9 @@ window.hardwareVariants = {
     ["Western Digital", "WD Blue SN580 1 TB", "Q 699", "media/products/storage-western-digital-wd-blue-sn580-1-tb.webp"],
     ["Crucial", "P3 Plus 1 TB NVMe", "Q 649", "media/products/storage-crucial-p3-plus-1-tb-nvme.webp"],
   ],
+  hdd: [],
+  scanner: [],
+  microcontrollers: [],
   psu: [
     ["EVGA", "600 W1 80+ White", "Q 499", "media/products/psu-evga-600-w1-80-white.webp"],
     ["Thermaltake", "Smart BX1 650W Bronze", "Q 649", "media/products/psu-thermaltake-smart-bx1-650w-bronze.webp"],

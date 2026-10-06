@@ -18,7 +18,7 @@ Abrir http://127.0.0.1:4173/. La portada del libro abre el índice del álbum.
 | --- | --- |
 | index.html | Portada animada del libro |
 | album.html | Inicio, computadora holográfica, FOX e índice de capítulos |
-| componentes.html | 25 categorías; 225 modelos, tres por gama |
+| componentes.html | 28 categorías; 252 modelos, tres por gama |
 | celulares.html | Nueve celulares; tres por gama |
 | laptops.html | Nueve laptops; tres por gama |
 | software.html | Seis sistemas y herramientas |

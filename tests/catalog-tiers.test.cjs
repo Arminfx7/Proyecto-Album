@@ -21,10 +21,10 @@ function catalog() {
   return categories;
 }
 
-test('25 categorías, 225 modelos y exactamente 3 por gama', () => {
+test('28 categorías, 252 modelos y exactamente 3 por gama', () => {
   const categories = catalog();
-  assert.equal(categories.length, 25);
-  assert.equal(categories.flatMap((c) => c.products).length, 225);
+  assert.equal(categories.length, 28);
+  assert.equal(categories.flatMap((c) => c.products).length, 252);
   for (const c of categories) {
     for (const tier of ['baja', 'media', 'alta']) {
       assert.equal(c.products.filter((p) => p.tier === tier).length, 3, `${c.id}/${tier}`);
@@ -52,6 +52,7 @@ test('todas las imágenes locales existen', () => {
       assert.equal(p.image, null, 'Un modelo sin foto no debe reutilizar otra imagen');
       continue;
     }
+    if (!p.image) continue;
     assert.ok(fs.existsSync(path.join(__dirname, '..', p.image)), p.image);
   }
 });

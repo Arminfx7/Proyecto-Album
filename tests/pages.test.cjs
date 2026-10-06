@@ -19,9 +19,9 @@ test('las páginas activas y sus recursos locales existen', () => {
     }
   }
 });
-test('243 modelos: 225 componentes, nueve celulares y nueve laptops', () => {
+test('270 modelos: 252 componentes, nueve celulares y nueve laptops', () => {
   const hardware = context.window.hardwareCatalog.flatMap(c=>c.products);
-  assert.equal(hardware.length, 225);
+  assert.equal(hardware.length, 252);
   for (const products of Object.values(context.window.deviceCatalog)) {
     assert.equal(products.length, 9);
     for (const tier of ['baja', 'media', 'alta']) assert.equal(products.filter(p=>p.tier===tier).length, 3);

@@ -44,8 +44,10 @@ body {
   border-left-color: #172b3a;
   background: linear-gradient(110deg, #ffffff0c, transparent 30%), linear-gradient(155deg, #20394b, #101d30 50%, #071420);
   box-shadow: inset 5px 0 9px #0008, 4px 2px 0 #b0c8d5, 8px 4px 0 #465d71, 12px 6px 0 #c4d8e3, 16px 8px 0 #15334a, 18px 26px 45px #0008;
-  /* Keep the hit target stationary so taps and keyboard activation stay reliable. */
-  animation: none;
+  /* Float with its own compositor transform; the spine and click target stay intact. */
+  translate: 0 0;
+  will-change: translate;
+  animation: cover-float 7.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   transition: none;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -119,9 +121,9 @@ body {
   animation-play-state: paused;
 }
 
-@keyframes tech-float {
-  0%, 100% { transform: translateY(0) rotateY(-12deg); }
-  50% { transform: translateY(-10px) rotateY(-9deg); }
+@keyframes cover-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -9px; }
 }
 
 @keyframes energy-breathe {
@@ -133,6 +135,13 @@ body {
   .entrance .book-cover,
   .energy-rays {
     animation: none;
+    translate: 0 0;
+  }
+}
+
+@media (pointer: coarse) {
+  .entrance .book-cover {
+    animation-duration: 8.4s;
   }
 }
 

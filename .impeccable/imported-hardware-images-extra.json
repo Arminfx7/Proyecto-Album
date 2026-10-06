@@ -1,0 +1,107 @@
+{
+  "Shure|MV7+": {
+    "path": "media/products/shure-mv7--official.jpg",
+    "source": "https://www.shure.com/en-US/products/microphones/mv7?variant=MV7+-K",
+    "imageSource": "https://products.shureweb.eu/shure_product_db/product_main_images/files/0a5/4f1/be-/setcard/fe71d068e73acc951e1c9a0458a7093c.jpeg"
+  },
+  "ASUS|ROG CROSSHAIR X870E HERO": {
+    "path": "media/products/asus-rog-crosshair-x870e-hero-official.png",
+    "source": "https://rog.asus.com/us/motherboards/rog-crosshair/rog-crosshair-x870e-hero/",
+    "imageSource": "https://dlcdnwebimgs.asus.com/gain/CB19300C-299E-4EEC-B3F1-8F3BEF6ECD48"
+  },
+  "Razer|Goliathus Extended Chroma": {
+    "path": "media/products/razer-goliathus-extended-chroma-official.jpg",
+    "source": "https://www.razer.com/gaming-mouse-mats/razer-goliathus-chroma/RZ02-02500300-R3U1",
+    "imageSource": "https://assets3.razerzone.com/E7_apc3JptKEr3USp4ywQgfa1K8=/767x511/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh37%2Fhd4%2F9081441583134%2FGoliathus-Extended-Chroma-1500x1000-1.jpg"
+  },
+  "Razer|Wolverine V3 Pro": {
+    "path": "media/products/razer-wolverine-v3-pro-official.webp",
+    "source": "https://www.razer.com/console-controllers/razer-wolverine-v3-pro",
+    "imageSource": "https://assets2.razerzone.com/images/pnx.assets/c2d889f8ea6cf0e4fdd73349b1d2ffdc/razer-wolverine-v3-pro-ogimage-1200x630.webp"
+  },
+  "Razer|Firefly V2": {
+    "path": "media/products/razer-firefly-v2-official.jpg",
+    "source": "https://www.razer.com/gaming-mouse-mats/razer-firefly-v2",
+    "imageSource": "https://assets2.razerzone.com/images/og-image/razer-firefly-v2-OGimage-1200x630.jpg"
+  },
+  "Razer|Sphex V3": {
+    "path": "media/products/razer-sphex-v3-official.jpg",
+    "source": "https://www.razer.com/gaming-mouse-mats/razer-sphex-v3",
+    "imageSource": "https://assets2.razerzone.com/images/pnx.assets/680be7939c922f220e26b2b9f48588db/razer-sphex-v3-ogimage.jpg"
+  },
+  "Razer|Strider": {
+    "path": "media/products/razer-strider-official.jpg",
+    "source": "https://www.razer.com/gaming/mouse/mats/razer-strider",
+    "imageSource": "https://assets2.razerzone.com/images/pnx.assets/d6f2e452eefd8e3e1747aceaf387aac2/razer-strider-ogimage_1200x630.jpg"
+  },
+  "Razer|Atlas": {
+    "path": "media/products/razer-atlas-official.jpg",
+    "source": "https://www.razer.com/gaming-mouse-mats/razer-atlas",
+    "imageSource": "https://assets2.razerzone.com/images/pnx.assets/dc94a56321b2a8843e2d14fa60646977/razer-atlas-ogimage_1200x630.jpg"
+  },
+  "BenQ|X3100i": {
+    "path": "media/products/benq-x3100i-official.jpg",
+    "source": "https://www.benq.com/en-us/projector/gaming/x3100i.html",
+    "imageSource": "https://image.benq.com/is/image/benqco/gaming-x3100i-gallery03?$ResponsivePreset$"
+  },
+  "8BitDo|Ultimate 2C Wired": {
+    "path": "media/products/8bitdo-ultimate-2c-wired-official.jpg",
+    "source": "https://www.8bitdo.com/ultimate-2c-wired-controller/",
+    "imageSource": "https://www.8bitdo.com/images/2024/ultimate-2c-wired/01-l.jpg"
+  },
+  "8BitDo|Pro 2": {
+    "path": "media/products/8bitdo-pro-2-official.jpg",
+    "source": "https://www.8bitdo.com/pro2/",
+    "imageSource": "https://www.8bitdo.com/images/2021/pro2/01-l.jpg?0228"
+  },
+  "Sony|DualSense Edge": {
+    "path": "media/products/sony-dualsense-edge-official.png",
+    "source": "https://www.playstation.com/en-us/accessories/dualsense-edge-wireless-controller/",
+    "imageSource": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-edge-listing-thumb-01-en-23aug22?$facebook$"
+  },
+  "Creative|Sound Blaster PLAY! 4": {
+    "path": "media/products/creative-sound-blaster-play-4-official.jpg",
+    "source": "https://us.creative.com/p/sound-blaster/sound-blaster-play-4",
+    "imageSource": "https://img.creative.com/images/products/hero/sound-blaster-play-4/01-hero-sbplay4-828.jpg?width=1200&height=600"
+  },
+  "Creative|Sound Blaster AE-9": {
+    "path": "media/products/creative-sound-blaster-ae-9-official.png",
+    "source": "https://us.creative.com/p/sound-blaster/sound-blaster-ae-9",
+    "imageSource": "https://img.creative.com/images/products/hero/sound-blaster-ae-9/hero.png?width=1200&height=600"
+  },
+  "Creative|Sound Blaster X4": {
+    "path": "media/products/creative-sound-blaster-x4-official.jpg",
+    "source": "https://us.creative.com/p/sound-blaster/sound-blaster-x4",
+    "imageSource": "https://img.creative.com/images/products/hero/others/hero-sound-blaster-x4.jpg?width=800&height=800?width=1200&height=600"
+  },
+  "LG|27GP850-B": {
+    "path": "media/products/lg-27gp850-b-official.jpg",
+    "source": "https://www.lg.com/us/monitors/lg-27gp850-b-gaming-monitor",
+    "imageSource": "https://www.lg.com/us/images/monitors/md08000370/450.jpg"
+  },
+  "LG|45GR95QE-B": {
+    "path": "media/products/lg-45gr95qe-b-official.jpg",
+    "source": "https://www.lg.com/us/monitors/lg-45gr95qe-b-gaming-monitor",
+    "imageSource": "https://www.lg.com/us/images/monitors/md08003490/gallery/D-1_v1.jpg"
+  },
+  "Creative|Sound Blaster AE-7": {
+    "path": "media/products/creative-sound-blaster-ae-7-official.jpg",
+    "source": "https://us.creative.com/p/sound-blaster/sound-blaster-ae-7",
+    "imageSource": "https://img.creative.com/images/products/hero/sound-blaster-ae-7/hero_mobile.jpg?width=1200&height=600"
+  },
+  "LG|27GN800-B": {
+    "path": "media/products/lg-27gn800-b-official.jpg",
+    "source": "https://www.lg.com/us/monitors/lg-27gn800-b-gaming-monitor",
+    "imageSource": "https://www.lg.com/us/images/monitors/md07517855/450.jpg"
+  },
+  "LG|32GS95UE-B": {
+    "path": "media/products/lg-32gs95ue-b-official.jpg",
+    "source": "https://www.lg.com/us/monitors/lg-32gs95ue-b-gaming-monitor",
+    "imageSource": "https://media.us.lg.com/transform/ecomm-PDPGalleryThumbnail-350x350/a20f4e18-225e-45e3-a2d4-8997f04b3fe1/32GS95UE-B_gallery_01_5000x5000"
+  },
+  "LG|27GS95QE-B": {
+    "path": "media/products/lg-27gs95qe-b-official.jpg",
+    "source": "https://www.lg.com/us/monitors/lg-27gs95qe-b-gaming-monitor",
+    "imageSource": "https://media.us.lg.com/transform/ecomm-PDPGallery-1100x730/ebb82051-a91a-4bf6-a95b-567fd58abc32/Monitor-27GS95QE-B-OLED-Gallery_3000x3000?io=transform:fill,width:1536"
+  }
+}

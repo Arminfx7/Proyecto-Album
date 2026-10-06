@@ -36,9 +36,11 @@
     return '<article class="product-entry' + (recommended ? ' is-recommended' : '') + '">' +
       (recommended ? '<span class="choice-label">Mi elección · ' + escape(tierTitles[p.tier]) + '</span>' : '') + '<figure class="product-picture">' +
       (image ? '<img loading="lazy" decoding="async" src="' + escape(image) + '" alt="' + escape(p.brand + ' ' + p.model) + '">' : '<span class="photo-pending">Fotografía exacta pendiente.<br>No mostramos otro modelo en su lugar.</span>') +
-      '</figure><div class="product-copy"><span class="kicker">' + escape(p.brand) + '</span><h3>' + escape(p.model) + '</h3><dl>' +
+      '</figure><div class="product-copy"><span class="kicker">' + escape(p.brand) + '</span><h3>' + escape(p.model) + '</h3>' +
+      '<div class="product-price"><span>Precio de referencia</span><strong>' + escape(p.price || 'Por consultar') + '</strong><small>Quetzales (GTQ) · confirmar vigencia y existencia</small></div><dl>' +
       specs.map(([name, value]) => '<div><dt>' + escape(name) + '</dt><dd>' + escape(value) + '</dd></div>').join('') +
       '</dl>' +
+      (p.priceSource ? '<a class="source-link price-source" href="' + escape(p.priceSource) + '" target="_blank" rel="noopener noreferrer">Ver precio en ' + escape(p.shop || 'tienda local') + ' ↗</a>' : '') +
       (asset?.source || p.source ? '<a class="source-link" href="' + escape(asset?.source || p.source) + '" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a>' : '') +
       '</div></article>';
   }
