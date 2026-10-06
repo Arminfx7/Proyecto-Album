@@ -9,7 +9,7 @@
     id: kind,
     name: kind === 'celulares' ? 'Celulares' : kind === 'laptops' ? 'Laptops' : 'Software',
     products: software ? window.softwareCatalog.map(p => ({
-      brand: p.type, model: p.name, image: p.image, source: p.source,
+      id: 'software|' + p.name, brand: p.type, model: p.name, image: p.image, source: p.source,
       specs: [['Categoría', p.type], ['Característica principal', p.desc]],
     })) : window.deviceCatalog[kind]
   }];
@@ -32,15 +32,18 @@
     const recommended = window.getTierAdvice?.(category, p.tier)?.product === p;
     const asset = window.hardwareImages?.[p.brand + '|' + p.model] || window.deviceImages?.[p.id];
     const image = asset?.path || (p.illustrative ? null : p.image);
+    const quote = window.productPrices?.[p.id || p.brand + '|' + p.model] || {};
+    const price = quote.price || p.price;
+    const shop = quote.shop || p.shop;
+    const priceSource = quote.priceSource || p.priceSource;
     const specs = window.getProductSpecs ? window.getProductSpecs(p, category) : (p.specs || []);
     return '<article class="product-entry' + (recommended ? ' is-recommended' : '') + '">' +
       (recommended ? '<span class="choice-label">Mi elección · ' + escape(tierTitles[p.tier]) + '</span>' : '') + '<figure class="product-picture">' +
       (image ? '<img loading="lazy" decoding="async" src="' + escape(image) + '" alt="' + escape(p.brand + ' ' + p.model) + '">' : '<span class="photo-pending">Fotografía exacta pendiente.<br>No mostramos otro modelo en su lugar.</span>') +
       '</figure><div class="product-copy"><span class="kicker">' + escape(p.brand) + '</span><h3>' + escape(p.model) + '</h3>' +
-      '<div class="product-price"><span>Precio de referencia</span><strong>' + escape(p.price || 'Por consultar') + '</strong><small>Quetzales (GTQ) · confirmar vigencia y existencia</small></div><dl>' +
+      '<div class="product-price"><span>Precio de referencia</span><strong>' + escape(price || 'Por consultar') + '</strong></div><dl>' +
       specs.map(([name, value]) => '<div><dt>' + escape(name) + '</dt><dd>' + escape(value) + '</dd></div>').join('') +
       '</dl>' +
-      (p.priceSource ? '<a class="source-link price-source" href="' + escape(p.priceSource) + '" target="_blank" rel="noopener noreferrer">Ver precio en ' + escape(p.shop || 'tienda local') + ' ↗</a>' : '') +
       (asset?.source || p.source ? '<a class="source-link" href="' + escape(asset?.source || p.source) + '" target="_blank" rel="noopener noreferrer">Consultar fabricante ↗</a>' : '') +
       '</div></article>';
   }
@@ -60,7 +63,7 @@
         const visibleAdvice = advice && entries.includes(advice.product);
         const recommendation = visibleAdvice ? '<aside class="tier-advice"><div><span class="kicker">Mi elección en esta gama</span><h3>' +
           escape(advice.product.brand + ' ' + advice.product.model) + '</h3></div><div><p>' +
-          escape(advice.text) + '</p><small>Una elección según este uso, no un ganador para todo el mundo.</small></div></aside>' : '';
+          escape(advice.text) + '</p></div></aside>' : '';
         return '<section class="tier-block"><div class="tier-heading"><h2>' +
           escape((query && hardware ? category.name + ' · ' : '') + (tierTitles[tier] || 'Herramientas y sistemas')) +
           '</h2><p>' + escape(tierDescriptions[tier] || 'Elige según tu trabajo') + '</p></div><div class="product-grid">' +

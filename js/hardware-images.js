@@ -254,5 +254,405 @@ window.hardwareImages = {
     "path": "media/products/lg-27gs95qe-b-official.jpg",
     "source": "https://www.lg.com/us/monitors/lg-27gs95qe-b-gaming-monitor",
     "imageSource": "https://media.us.lg.com/transform/ecomm-PDPGallery-1100x730/ebb82051-a91a-4bf6-a95b-567fd58abc32/Monitor-27GS95QE-B-OLED-Gallery_3000x3000?io=transform:fill,width:1536"
+  },
+  "AMD|Ryzen 3 4100": {
+    "path": "media/products/procesadores-amd-ryzen-3-4100.webp",
+    "source": "https://www.amd.com/en/products/specifications/processors.html",
+    "imageSource": "https://albadrlaptop.com/wp-content/uploads/2022/07/AMD-Ryzen-3-4100-R3-4100-3-8-GHz-4-Core-8-Thread-CPU-Processor-7NM.jpg"
+  },
+  "AMD|Ryzen 9 7950X": {
+    "path": "media/products/procesadores-amd-ryzen-9-7950x.webp",
+    "source": "https://www.amd.com/en/products/specifications/processors.html",
+    "imageSource": "https://www.ryans.com/storage/products/main/amd-ryzen-9-7950x-processor-oemtray-fan-not-21712376719.webp"
+  },
+  "Corsair|VENGEANCE 32 GB DDR5": {
+    "path": "media/products/ram-corsair-vengeance-32-gb-ddr5.webp",
+    "source": "https://www.corsair.com/us/en/c/memory",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/06/07/16/LD0006071661.jpg"
+  },
+  "Kingston|FURY Beast 32 GB DDR5": {
+    "path": "media/products/ram-kingston-fury-beast-32-gb-ddr5.webp",
+    "source": "https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr5-memory",
+    "imageSource": "https://m.media-amazon.com/images/I/71UcVYxIL9L._AC_SL1500_.jpg"
+  },
+  "Crucial|Pro 32 GB DDR5": {
+    "path": "media/products/ram-crucial-pro-32-gb-ddr5.webp",
+    "source": "https://www.crucial.com/memory/ddr5",
+    "imageSource": "https://m.media-amazon.com/images/I/61EUuA9HiaL.jpg"
+  },
+  "Corsair|DOMINATOR TITANIUM 64 GB DDR5": {
+    "path": "media/products/ram-corsair-dominator-titanium-64-gb-ddr5.webp",
+    "source": "https://www.corsair.com/us/en/c/memory",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/06/06/81/LD0006068146_0006068163_0006068328_0006068349.jpg"
+  },
+  "Corsair|VENGEANCE 64 GB DDR5": {
+    "path": "media/products/ram-corsair-vengeance-64-gb-ddr5.webp",
+    "source": "https://www.corsair.com/us/en/c/memory",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/05/98/23/LD0005982387_0005986986_0005995914.jpg"
+  },
+  "Corsair|DOMINATOR TITANIUM 96 GB DDR5": {
+    "path": "media/products/ram-corsair-dominator-titanium-96-gb-ddr5.webp",
+    "source": "https://www.corsair.com/us/en/c/memory",
+    "imageSource": "https://m.media-amazon.com/images/I/611o1NX2HvL._AC_SL1500_.jpg"
+  },
+  "NVIDIA|GeForce RTX 4060 Ti": {
+    "path": "media/products/gpu-nvidia-geforce-rtx-4060-ti.webp",
+    "source": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/",
+    "imageSource": "https://m.media-amazon.com/images/I/71QvZTnJm+L._AC_.jpg"
+  },
+  "AMD|Radeon RX 7700 XT": {
+    "path": "media/products/gpu-amd-radeon-rx-7700-xt.webp",
+    "source": "https://www.amd.com/en/products/graphics/desktops/radeon.html",
+    "imageSource": "https://m.media-amazon.com/images/I/81xO-wWo97L._AC_.jpg"
+  },
+  "AMD|Radeon RX 7800 XT": {
+    "path": "media/products/gpu-amd-radeon-rx-7800-xt.webp",
+    "source": "https://www.amd.com/en/products/graphics/desktops/radeon.html",
+    "imageSource": "https://m.media-amazon.com/images/I/81VpOvD9wJL._AC_.jpg"
+  },
+  "NVIDIA|GeForce RTX 5070 Ti": {
+    "path": "media/products/gpu-nvidia-geforce-rtx-5070-ti.webp",
+    "source": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/",
+    "imageSource": "https://m.media-amazon.com/images/I/71Rw3ze-F7L._AC_.jpg"
+  },
+  "NVIDIA|GeForce RTX 5080": {
+    "path": "media/products/gpu-nvidia-geforce-rtx-5080.webp",
+    "source": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/06/20/52/LD0006205295.jpg"
+  },
+  "NVIDIA|GeForce RTX 5090": {
+    "path": "media/products/gpu-nvidia-geforce-rtx-5090.webp",
+    "source": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/",
+    "imageSource": "https://images.pc-builds.com/images/components/9ccaebd5c398391d6f5fc5bcfb273ff2/5ca95b247b83eb376ce143ae00a2cc5d/db4a3516a670071f2fa6fcab81c01996.png"
+  },
+  "Samsung|870 EVO 1 TB": {
+    "path": "media/products/storage-samsung-870-evo-1-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/ssd/",
+    "imageSource": "https://www.ssd1tb.com/wp-content/uploads/samsung-870-evo-1tb.jpg"
+  },
+  "Samsung|990 EVO Plus 1 TB": {
+    "path": "media/products/storage-samsung-990-evo-plus-1-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/ssd/",
+    "imageSource": "https://www.idcmayoristas.com/wp-content/uploads/2024/10/samsung-990-evo-plus-mz-v9s1t0-ssd-mz-v9s1t0b-am-lal.png"
+  },
+  "Samsung|990 PRO 2 TB": {
+    "path": "media/products/storage-samsung-990-pro-2-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/ssd/",
+    "imageSource": "https://www.alternate.de/p/600x600/3/4/SAMSUNG_990_PRO_2_TB__SSD@@1864243_30.jpg"
+  },
+  "Samsung|9100 PRO 2 TB": {
+    "path": "media/products/storage-samsung-9100-pro-2-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/ssd/",
+    "imageSource": "https://bizweb.dktcdn.net/thumb/1024x1024/100/329/122/products/ssd-samsung-9100-pro-2tb-pcie-gen5-x4-nvme-mz-vap2t0bw-04.jpg?v=1744363855783"
+  },
+  "Samsung|990 PRO 4 TB": {
+    "path": "media/products/storage-samsung-990-pro-4-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/ssd/",
+    "imageSource": "https://images.samsung.com/is/image/samsung/p6pim/ca/mz-v9p4t0b-am/gallery/ca-990pro-nvme-m2-ssd-436124-mz-v9p4t0b-am-538881567?$650_519_PNG$"
+  },
+  "Corsair|RM650": {
+    "path": "media/products/psu-corsair-rm650.webp",
+    "source": "https://www.corsair.com/us/en/c/psu",
+    "imageSource": "https://m.media-amazon.com/images/I/91+DoCpZSQL.jpg"
+  },
+  "Corsair|RM750e": {
+    "path": "media/products/psu-corsair-rm750e.webp",
+    "source": "https://www.corsair.com/us/en/c/psu",
+    "imageSource": "https://m.media-amazon.com/images/I/71KlTBqR36L._AC_SL1500_.jpg"
+  },
+  "Corsair|RM850e": {
+    "path": "media/products/psu-corsair-rm850e.webp",
+    "source": "https://www.corsair.com/us/en/c/psu",
+    "imageSource": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/v1680721024/products/Power-Supply-Units/base-rme-series-psu-config/CP-9020249/Gallery/RM850e_01.webp"
+  },
+  "Corsair|RM1000e": {
+    "path": "media/products/psu-corsair-rm1000e.webp",
+    "source": "https://www.corsair.com/us/en/c/psu",
+    "imageSource": "https://m.media-amazon.com/images/I/71G+PGgT1fL.jpg"
+  },
+  "Corsair|HX1000i": {
+    "path": "media/products/psu-corsair-hx1000i.webp",
+    "source": "https://www.corsair.com/us/en/c/psu",
+    "imageSource": "https://m.media-amazon.com/images/I/81qkLv+EvdL._AC_.jpg"
+  },
+  "Corsair|HX1500i": {
+    "path": "media/products/psu-corsair-hx1500i.webp",
+    "source": "https://www.corsair.com/us/en/c/psu",
+    "imageSource": "https://www.ryans.com/storage/products/main/corsair-hx1500i-1500w-ultra-low-noise-black-11666590674.webp"
+  },
+  "Logitech|K120": {
+    "path": "media/products/keyboard-logitech-k120.webp",
+    "source": "https://www.logitech.com/",
+    "imageSource": "https://c1.neweggimages.com/ProductImageCompressAll1280/23-126-096-07.jpg"
+  },
+  "SteelSeries|Arctis Nova 5 Wireless": {
+    "path": "media/products/audio-steelseries-arctis-nova-5-wireless.webp",
+    "source": "https://steelseries.com/arctis-nova",
+    "imageSource": "https://m.media-amazon.com/images/I/61+WSjGgFzL._AC_.jpg"
+  },
+  "HyperX|Cloud III": {
+    "path": "media/products/audio-hyperx-cloud-iii.webp",
+    "source": "https://hyperx.com/",
+    "imageSource": "https://m.media-amazon.com/images/I/71NZawTvdDL._AC_SL1500_.jpg"
+  },
+  "SteelSeries|Arctis Nova 7 Wireless": {
+    "path": "media/products/audio-steelseries-arctis-nova-7-wireless.webp",
+    "source": "https://steelseries.com/arctis-nova",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/05/99/99/LD0005999904.jpg"
+  },
+  "SteelSeries|Arctis Nova Pro": {
+    "path": "media/products/audio-steelseries-arctis-nova-pro.webp",
+    "source": "https://steelseries.com/arctis-nova",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/06/13/42/LD0006134237.jpg"
+  },
+  "SteelSeries|Arctis Nova Pro Wireless": {
+    "path": "media/products/audio-steelseries-arctis-nova-pro-wireless.webp",
+    "source": "https://steelseries.com/arctis-nova",
+    "imageSource": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/11/steelseries-arctis-nova-pro-wireless-gaming-headset.jpg"
+  },
+  "Logitech|C310": {
+    "path": "media/products/webcam-logitech-c310.webp",
+    "source": "https://www.logitech.com/en-us/products/webcams.html",
+    "imageSource": "https://makerbazar.in/cdn/shop/files/LogitechC310DigitalHDWebcamwithMic-6_1024x.jpg?v=1692346292"
+  },
+  "Logitech|Brio 100": {
+    "path": "media/products/webcam-logitech-brio-100.webp",
+    "source": "https://www.logitech.com/en-us/products/webcams.html",
+    "imageSource": "https://m.media-amazon.com/images/I/61nTmIUB0LL._AC_SL1500_.jpg"
+  },
+  "Logitech|Brio 500": {
+    "path": "media/products/webcam-logitech-brio-500.webp",
+    "source": "https://www.logitech.com/en-us/products/webcams.html",
+    "imageSource": "https://static.bhphoto.com/images/fb/1725545.jpg"
+  },
+  "Logitech|Brio 4K": {
+    "path": "media/products/webcam-logitech-brio-4k.webp",
+    "source": "https://www.logitech.com/en-us/products/webcams.html",
+    "imageSource": "https://m.media-amazon.com/images/I/71SAamTGWQL._AC_SL1500_.jpg"
+  },
+  "Logitech|MX Brio": {
+    "path": "media/products/webcam-logitech-mx-brio.webp",
+    "source": "https://www.logitech.com/en-us/products/webcams.html",
+    "imageSource": "https://i5.walmartimages.com/seo/Logitech-MX-Brio-Ultra-HD-4K-Collaboration-Streaming-Webcam-1080p-60-FPS-Dual-Noise-Reducing-Mics-Show-Mode-USB-C-Webcam-Cover-Works-Microsoft-Teams_d1007cf8-d3cb-4d77-93c4-484ee6351722.d5be3e0f0fb38b37a5780a52756ed93b.jpeg"
+  },
+  "Cooler Master|Hyper 212 Black Edition": {
+    "path": "media/products/cooling-cooler-master-hyper-212-black-edition.webp",
+    "source": "https://www.coolermaster.com/",
+    "imageSource": "https://m.media-amazon.com/images/I/81nu-dwkAeS._SL1500_.jpg"
+  },
+  "Noctua|NH-U9S": {
+    "path": "media/products/cooling-noctua-nh-u9s.webp",
+    "source": "https://www.noctua.at/en/products/browse/coolers",
+    "imageSource": "https://m.media-amazon.com/images/I/81i-InMmEIL._AC_.jpg"
+  },
+  "Noctua|NH-D15": {
+    "path": "media/products/cooling-noctua-nh-d15.webp",
+    "source": "https://www.noctua.at/en/products/browse/coolers",
+    "imageSource": "https://m.media-amazon.com/images/I/81i9YOlnPEL._SL1500_.jpg"
+  },
+  "Noctua|NH-D15 G2": {
+    "path": "media/products/cooling-noctua-nh-d15-g2.webp",
+    "source": "https://www.noctua.at/en/products/browse/coolers",
+    "imageSource": "https://www.tech-critter.com/wp-content/uploads/2024/07/Noctua-NH-D15-G2-3.jpg"
+  },
+  "Noctua|NH-U12A": {
+    "path": "media/products/cooling-noctua-nh-u12a.webp",
+    "source": "https://www.noctua.at/en/products/browse/coolers",
+    "imageSource": "https://m.media-amazon.com/images/I/81JXXmBCaUL.jpg"
+  },
+  "Corsair|3000D AIRFLOW": {
+    "path": "media/products/case-corsair-3000d-airflow.webp",
+    "source": "https://www.corsair.com/us/en/c/pc-cases",
+    "imageSource": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/CC-9011255-WW/3000D_RGB_AF_BLACK_RENDER_01.webp"
+  },
+  "Cooler Master|MasterBox Q300L": {
+    "path": "media/products/case-cooler-master-masterbox-q300l.webp",
+    "source": "https://www.coolermaster.com/",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/04/82/39/LD0004823950_2.jpg"
+  },
+  "Corsair|5000D AIRFLOW": {
+    "path": "media/products/case-corsair-5000d-airflow.webp",
+    "source": "https://www.corsair.com/us/en/c/pc-cases",
+    "imageSource": "https://assets.corsair.com/image/upload/c_scale%2Cq_auto/products/Cases/base-5000d-airflow/Gallery/5000D_AF_WHITE_001.webp"
+  },
+  "Corsair|7000D AIRFLOW": {
+    "path": "media/products/case-corsair-7000d-airflow.webp",
+    "source": "https://www.corsair.com/us/en/c/pc-cases",
+    "imageSource": "https://eezepc.com/wp-content/uploads/2021/10/Corsair-7000D-AIRFLOW.jpg"
+  },
+  "Corsair|6500X": {
+    "path": "media/products/case-corsair-6500x.webp",
+    "source": "https://www.corsair.com/us/en/c/pc-cases",
+    "imageSource": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/6500/CC-9011257-WW/6500X_BLACK_HERO_01_AA.webp"
+  },
+  "ARCTIC|F12 PWM PST": {
+    "path": "media/products/fans-arctic-f12-pwm-pst.webp",
+    "source": "https://www.arctic.de/en/products/cooling/case-fan/",
+    "imageSource": "https://www.arctic.de/media/3f/14/17/1674565016/f12-pwm-pst-black-g00_pst-icon.png"
+  },
+  "ARCTIC|P12 Max": {
+    "path": "media/products/fans-arctic-p12-max.webp",
+    "source": "https://www.arctic.de/en/products/cooling/case-fan/",
+    "imageSource": "https://files.pccasegear.com/images/ACFAN00280A-add1.jpg"
+  },
+  "ARCTIC|P14 Max": {
+    "path": "media/products/fans-arctic-p14-max.webp",
+    "source": "https://www.arctic.de/en/products/cooling/case-fan/",
+    "imageSource": "https://www.arctic.de/media/97/e1/f6/1741161930/P14_Max_g06.jpg"
+  },
+  "Noctua|NF-A12x25 PWM": {
+    "path": "media/products/fans-noctua-nf-a12x25-pwm.webp",
+    "source": "https://www.noctua.at/",
+    "imageSource": "https://m.media-amazon.com/images/I/81z7B2snn9L._SL1500_.jpg"
+  },
+  "Noctua|NF-A14x25 G2 PWM": {
+    "path": "media/products/fans-noctua-nf-a14x25-g2-pwm.webp",
+    "source": "https://www.noctua.at/",
+    "imageSource": "https://cdn.noctua.at/media/noctua_nf_a14x25_g2_pwm_2.jpg"
+  },
+  "be quiet!|Silent Wings Pro 4 120 mm": {
+    "path": "media/products/fans-be-quiet-silent-wings-pro-4-120-mm.webp",
+    "source": "https://www.bequiet.com/",
+    "imageSource": "https://media.ldlc.com/r1600/ld/products/00/05/96/51/LD0005965189.jpg"
+  },
+  "Shure|MV6": {
+    "path": "media/products/microphone-shure-mv6.webp",
+    "source": "https://www.shure.com/en-US/applications/live-streaming",
+    "imageSource": "https://m.media-amazon.com/images/I/61u0AqBTp3L.jpg"
+  },
+  "Epson|EcoTank ET-2850": {
+    "path": "media/products/printer-epson-ecotank-et-2850.webp",
+    "source": "https://epson.com/For-Work/Printers/Inkjet/EcoTank-ET-2800-Wireless-Color-All-in-One-Cartridge-Free-Supertank-Printer-with-Scan-and-Copy/p/C11CJ66201",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6470/6470009cv17d.jpg"
+  },
+  "Epson|EcoTank ET-3850": {
+    "path": "media/products/printer-epson-ecotank-et-3850.webp",
+    "source": "https://epson.com/For-Work/Printers/Inkjet/EcoTank-ET-2800-Wireless-Color-All-in-One-Cartridge-Free-Supertank-Printer-with-Scan-and-Copy/p/C11CJ66201",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6470/6470010cv11d.jpg"
+  },
+  "Epson|EcoTank ET-4850": {
+    "path": "media/products/printer-epson-ecotank-et-4850.webp",
+    "source": "https://epson.com/For-Work/Printers/Inkjet/EcoTank-ET-2800-Wireless-Color-All-in-One-Cartridge-Free-Supertank-Printer-with-Scan-and-Copy/p/C11CJ66201",
+    "imageSource": "https://m.media-amazon.com/images/I/71kUHumYlNL._AC_.jpg"
+  },
+  "Epson|EcoTank ET-8500": {
+    "path": "media/products/printer-epson-ecotank-et-8500.webp",
+    "source": "https://epson.com/For-Work/Printers/Inkjet/EcoTank-ET-2800-Wireless-Color-All-in-One-Cartridge-Free-Supertank-Printer-with-Scan-and-Copy/p/C11CJ66201",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6459/6459641cv11d.jpg"
+  },
+  "Epson|EcoTank ET-8550": {
+    "path": "media/products/printer-epson-ecotank-et-8550.webp",
+    "source": "https://epson.com/For-Work/Printers/Inkjet/EcoTank-ET-2800-Wireless-Color-All-in-One-Cartridge-Free-Supertank-Printer-with-Scan-and-Copy/p/C11CJ66201",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6469/6469372cv23d.jpg"
+  },
+  "Samsung|T5 EVO 2 TB": {
+    "path": "media/products/external-ssd-samsung-t5-evo-2-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/memory-buying-guide/",
+    "imageSource": "https://img.ricardostatic.ch/images/3bca34d9-bdad-4f7e-8c57-107bbd35fe6b/t_1000x750/samsung-portable-ssd-t5-evo-2-tb"
+  },
+  "Samsung|T7 1 TB": {
+    "path": "media/products/external-ssd-samsung-t7-1-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/memory-buying-guide/",
+    "imageSource": "https://m.media-amazon.com/images/I/91YfRIy7kYL.jpg"
+  },
+  "Samsung|T9 1 TB": {
+    "path": "media/products/external-ssd-samsung-t9-1-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/memory-buying-guide/",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6559/6559266cv15d.jpg"
+  },
+  "Samsung|T9 2 TB": {
+    "path": "media/products/external-ssd-samsung-t9-2-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/memory-buying-guide/",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6559/6559267cv19d.jpg"
+  },
+  "Samsung|T9 4 TB": {
+    "path": "media/products/external-ssd-samsung-t9-4-tb.webp",
+    "source": "https://www.samsung.com/us/memory-storage/memory-buying-guide/",
+    "imageSource": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6559/6559268cv16d.jpg"
+  },
+  "CyberPower|CP550SLG": {
+    "path": "media/products/ups-cyberpower-cp550slg.webp",
+    "source": "https://www.cyberpowersystems.com/products/ups/",
+    "imageSource": "https://c1.neweggimages.com/productimage/nb640/42-102-117-V01.jpg"
+  },
+  "CyberPower|CP1000PFCLCD": {
+    "path": "media/products/ups-cyberpower-cp1000pfclcd.webp",
+    "source": "https://www.cyberpowersystems.com/products/ups/",
+    "imageSource": "https://www.cyberpowersystems.com/wp-content/uploads/2017/04/CP1000PFCLCD_L.jpg"
+  },
+  "CyberPower|CP1500PFCLCD": {
+    "path": "media/products/ups-cyberpower-cp1500pfclcd.webp",
+    "source": "https://www.cyberpowersystems.com/products/ups/",
+    "imageSource": "https://www.cyberpowersystems.com/wp-content/uploads/2016/07/CP1500PFCLCD_F-1.jpg"
+  },
+  "CyberPower|PR1500LCD": {
+    "path": "media/products/ups-cyberpower-pr1500lcd.webp",
+    "source": "https://www.cyberpowersystems.com/products/ups/",
+    "imageSource": "https://bhtechnology.mx/wp-content/uploads/2021/07/PR1500LCD.jpg"
+  },
+  "CyberPower|OR1500PFCRT2U": {
+    "path": "media/products/ups-cyberpower-or1500pfcrt2u.webp",
+    "source": "https://www.cyberpowersystems.com/products/ups/",
+    "imageSource": "https://www.cyberpower.com/mx/es/File/GetImageByGuid/6298c353-7dd0-4626-b8e0-b856fd7a07c6"
+  },
+  "Creative|Sound Blaster G3": {
+    "path": "media/products/sound-card-creative-sound-blaster-g3.webp",
+    "source": "https://support.creative.com/kb/ShowArticle.aspx?sid=10846",
+    "imageSource": "https://www.jib.co.th/img_master/product/original/2020050510420138656_1.jpg"
+  },
+  "Lexar|Professional USB-C Dual-Slot Reader": {
+    "path": "media/products/card-reader-lexar-professional-usb-c-dual-slot-reader.webp",
+    "source": "https://americas.lexar.com/products/card-reader-accessories/",
+    "imageSource": "https://msldigital.com.my/wp-content/uploads/2023/05/7817ad87562ff1f7b0ae02fb68f92861.jpeg"
+  },
+  "Lexar|Professional Multi-Card 3-in-1 USB 3.2 Gen 1": {
+    "path": "media/products/card-reader-lexar-professional-multi-card-3-in-1-usb-3-2-gen-1.webp",
+    "source": "https://americas.lexar.com/products/card-reader-accessories/",
+    "imageSource": "https://m.media-amazon.com/images/I/81EEOuibM8L._AC_SL1500_.jpg"
+  },
+  "Lexar|Professional CFexpress Type B USB 3.2 Gen 2x2 Reader": {
+    "path": "media/products/card-reader-lexar-professional-cfexpress-type-b-usb-3-2-gen-2x2-reader.webp",
+    "source": "https://americas.lexar.com/products/card-reader-accessories/",
+    "imageSource": "https://m.media-amazon.com/images/I/81AuWMIgMsL.jpg"
+  },
+  "Lexar|Professional Workflow CFexpress 4.0 Type A Reader": {
+    "path": "media/products/card-reader-lexar-professional-workflow-cfexpress-4-0-type-a-reader.webp",
+    "source": "https://americas.lexar.com/products/card-reader-accessories/",
+    "imageSource": "https://cdn.cvp.com/images/products/altimage/26-02-20251740591632lpwf730n-5angl-main.jpg"
+  },
+  "Lexar|Professional Workflow CFexpress 4.0 Type B Reader": {
+    "path": "media/products/card-reader-lexar-professional-workflow-cfexpress-4-0-type-b-reader.webp",
+    "source": "https://americas.lexar.com/products/card-reader-accessories/",
+    "imageSource": "https://cdn.idealo.com/folder/Product/206044/3/206044323/s1_produktbild_max/lexar-professional-workflow-cfexpress-4-0-type-b-card-reader.jpg"
+  },
+  "Xbox|Elite Wireless Controller Series 2": {
+    "path": "media/products/gamepad-xbox-elite-wireless-controller-series-2.webp",
+    "source": "https://www.xbox.com/accessories",
+    "imageSource": "https://m.media-amazon.com/images/I/71k-1plH95L._AC_SL1500_.jpg"
+  },
+  "BenQ|TH575": {
+    "path": "media/products/projector-benq-th575.webp",
+    "source": "https://www.benq.com/en-us/projector/home-entertainment.html",
+    "imageSource": "https://image.benq.com/is/image/benqco/th575-right30-1"
+  },
+  "BenQ|TH685P": {
+    "path": "media/products/projector-benq-th685p.webp",
+    "source": "https://www.benq.com/en-us/projector/home-entertainment.html",
+    "imageSource": "https://image.benq.com/is/image/benqco/th685p-right30"
+  },
+  "BenQ|TK700": {
+    "path": "media/products/projector-benq-tk700.webp",
+    "source": "https://www.benq.com/en-us/projector/home-entertainment.html",
+    "imageSource": "https://www.projectorreviews.com/wp-content/uploads/2022/04/BenQ-TK700-left-2.jpg"
+  },
+  "BenQ|W4000i": {
+    "path": "media/products/projector-benq-w4000i.webp",
+    "source": "https://www.benq.com/en-us/projector/home-entertainment.html",
+    "imageSource": "https://123mamanet.com/wp-content/uploads/2023/08/benq-1.jpg"
+  },
+  "Seagate|BarraCuda 4 TB 3.5\"": {
+    "path": "media/products/hdd-seagate-barracuda-4tb.webp",
+    "source": "https://www.seagate.com/products/hard-drives/barracuda-hard-drive/",
+    "imageSource": "https://www.idcmayoristas.com/wp-content/uploads/2024/10/seagate-barracuda-st4000dm004-hard-drive-4-st4000dm004-lal-2.png"
   }
 };

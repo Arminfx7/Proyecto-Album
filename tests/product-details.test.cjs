@@ -10,9 +10,9 @@ for (const name of ['catalog-extra', 'catalog-tiers', 'hardware-data', 'devices-
 }
 const { hardwareCatalog, deviceCatalog, hardwareImages, getProductSpecs } = context.window;
 
-test('51 fotografías nuevas con archivo, modelo y procedencia verificables', () => {
+test('131 fotografías de modelos exactos con archivo, modelo y procedencia verificables', () => {
   const models = new Set(hardwareCatalog.flatMap(c => c.products.map(p => p.brand + '|' + p.model)));
-  assert.equal(Object.keys(hardwareImages).length, 51);
+  assert.equal(Object.keys(hardwareImages).length, 131);
   const paths = [];
   for (const [key, asset] of Object.entries(hardwareImages)) {
     assert.ok(models.has(key), key);
@@ -21,8 +21,8 @@ test('51 fotografías nuevas con archivo, modelo y procedencia verificables', ()
     assert.equal(new URL(asset.imageSource).protocol, 'https:');
     paths.push(asset.path);
   }
-  assert.equal(new Set(paths).size, 51);
-  assert.equal(hardwareCatalog.flatMap(c => c.products).filter(p => p.illustrative && !hardwareImages[p.brand + '|' + p.model]).length, 79);
+  assert.equal(new Set(paths).size, 131);
+  assert.equal(hardwareCatalog.flatMap(c => c.products).filter(p => p.illustrative && !hardwareImages[p.brand + '|' + p.model]).length, 0);
 });
 
 test('cada dispositivo tiene detalles adicionales, sin modificar los datos base', () => {

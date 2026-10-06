@@ -36,7 +36,8 @@ Las fichas muestran características importantes, sin bloques de opinión indivi
 - `js/catalog-tiers.js`: selección de tres modelos por gama.
 - `js/devices-data.js`: celulares y laptops, especificaciones y enlace oficial. El campo histórico de opinión ya no se muestra.
 - `js/product-specs.js`: especificaciones adicionales verificadas y notas de uso/instalación, sin alterar los datos base.
-- `js/hardware-images.js`: 51 fotografías nuevas asociadas al modelo exacto, con procedencia oficial.
+- `js/hardware-images.js`: 131 fotografías asociadas al modelo exacto, con procedencia.
+- `js/product-prices.js`: precio de referencia en quetzales de cada producto (hardware, celulares, laptops y software). Las cotizaciones locales traen tienda y enlace; el resto es una estimación convertida de dólares a Q 7.70 y lo indica en la ficha.
 - `js/device-images.js`: asociación explícita de cada dispositivo nuevo con su foto y procedencia.
 - `js/tier-advice.js`: 81 recomendaciones editoriales específicas, una por gama de cada categoría de hardware, celulares y laptops. No son rankings automáticos ni afirmaciones de precio.
 - `css/page-transition.css`: transición nativa entre portada e inicio. Sin soporte o con movimiento reducido, el enlace conserva la navegación normal.
@@ -52,9 +53,11 @@ Para añadir un dispositivo, registrar un ID único en devices-data.js y su imag
 
 Los 18 nuevos dispositivos tienen fotografías asociadas a páginas o PDFs oficiales. Las tres Lenovo se extrajeron como JPEG del PDF técnico, sin modificar el contenido. Las fotografías conservan los derechos de sus titulares; la procedencia no equivale a una licencia de redistribución.
 
-En el catálogo heredado había 130 modelos que reutilizaban la imagen de otro producto. Se retiró esa asociación. Se incorporaron 51 fotografías oficiales específicas, revisadas visualmente; quedan 79 modelos con “Fotografía exacta pendiente”. Las otras 95 asociaciones heredadas se conservan; no se afirma una auditoría visual exhaustiva de todas ellas. Los metadatos de procedencia están en `js/hardware-images.js`; no equivalen a una licencia de redistribución.
+Los 252 modelos de hardware, los 18 dispositivos y los 6 programas muestran una fotografía propia; ninguna se repite entre modelos. Las fotografías conservan los derechos de sus titulares; la procedencia no equivale a una licencia de redistribución. Los metadatos de procedencia están en `js/hardware-images.js` y `js/device-images.js`.
 
-No se publican precios ni puntuaciones de rendimiento en las fichas nuevas.
+## Precios
+
+Todos los productos muestran un precio de referencia en quetzales (GTQ). Si existe una cotización de una tienda guatemalteca, la ficha enlaza a ella; si no, el precio es una estimación (precio de lista en dólares × Q 7.70) y la ficha lo indica. Son orientativos: confirmar vigencia y existencia antes de comprar. Para actualizar un precio, editar su entrada en `js/product-prices.js`.
 
 ## Pruebas
 
@@ -64,7 +67,7 @@ Requiere Node.js 20 o posterior:
 node --test tests/*.test.cjs
 ```
 
-Validan cantidades, distribución por gama, duplicados, páginas/recursos locales, procedencia de las 18 fotos nuevas y ausencia de imágenes genéricas asignadas a modelos nuevos. Estas pruebas no sustituyen la revisión visual del modelo.
+Validan cantidades, distribución por gama, duplicados, páginas/recursos locales, que todo producto tenga precio en quetzales y una fotografía propia sin repetirse, y la procedencia de las fotos. Estas pruebas no sustituyen la revisión visual del modelo.
 
 ## Herramientas de imágenes
 

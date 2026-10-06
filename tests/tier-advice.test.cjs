@@ -11,7 +11,7 @@ const categories = [
   ...context.window.hardwareCatalog,
   ...Object.entries(context.window.deviceCatalog).map(([id, products]) => ({ id, products }))
 ];
-test('81 recomendaciones: una opción existente de la gama correcta', () => {
+test('90 recomendaciones: una opción existente de la gama correcta', () => {
   let count = 0;
   const paragraphs = new Set();
   for (const category of categories) {
@@ -25,8 +25,8 @@ test('81 recomendaciones: una opción existente de la gama correcta', () => {
       count++;
     }
   }
-  assert.equal(count, 81);
-  assert.equal(paragraphs.size, 81, 'No repetir el mismo párrafo entre categorías');
+  assert.equal(count, 90);
+  assert.equal(paragraphs.size, 90, 'No repetir el mismo párrafo entre categorías');
 });
 test('la elección de celulares de gama media coincide con el texto', () => {
   const category = categories.find(c => c.id === 'celulares');
